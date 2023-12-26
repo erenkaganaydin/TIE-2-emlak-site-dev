@@ -98,10 +98,10 @@
                             <ul>
                                 <li><a href="index.html">Anasayfa</a></li>
                                 <li><a href="ilanlar.php">Tüm İlanlar</a></li>
-                                <li><a href="about.php">Hakkımızda</a></li>
                             </ul>
                             <ul class="nav-right">
                                 <li><a href="ilanlar.php?id=4">En Son İlan</a></li>
+                                <li><a href="about.php">Hakkımızda</a></li>
                             </ul>
                         </div>
                     </div>
