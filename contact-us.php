@@ -9,10 +9,10 @@ try {
 } catch (PDOException $e) {
     die("Bağlantı hatası: " . $e->getMessage());
 }
-$sql = "SELECT * FROM yoneticibilgileri where Deleted = 0";
-$stmt = $pdo->prepare($sql);
-$stmt->execute();
-$bilgiler = $stmt->fetch(PDO::FETCH_ASSOC);
+$sqlbililer = "SELECT * FROM yoneticibilgileri where Deleted = 0";
+$stmtbilgiler = $pdo->prepare($sqlbililer);
+$stmtbilgiler->execute();
+$bilgiler = $stmtbilgiler->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <body class="inner-pages hd-white">
