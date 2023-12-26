@@ -28,7 +28,7 @@ include_once "header.php"
                             <h2 class="text-left mb-4">Hakkımızda <span>Emlak Sitem</span></h2>
                         </div>
                         <div class="pftext">
-                            <p></p>
+                            <p>Başladığımız ilk günden bugüne, kaliteli, anlaşılır ve çözüm odaklı hizmet verme hedefimiz ile binlerce kişiyi doğru alım ve satım işlemi ile bir araya getirdik.</p>
                         </div>
                         <div class="box bg-2">
                             <a href="contact-us.php" class="text-center button button--moema button--text-thick button--text-upper button--size-s">Daha Fazlası</a>
