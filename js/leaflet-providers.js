@@ -131,7 +131,7 @@
 			options: {
 				maxZoom: 18,
 				attribution:
-					'{attribution.OpenStreetMap}, <a href="http://www.openinframap.org/about.html">About OpenInfraMap</a>'
+					'{attribution.OpenStreetMap}, <a href="http://www.openinframap.org/about.php">About OpenInfraMap</a>'
 			},
 			variants: {
 				Power: 'power',
