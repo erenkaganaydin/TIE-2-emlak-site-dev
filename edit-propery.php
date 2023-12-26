@@ -1,4 +1,16 @@
-<?php include "ortak/header.php"; ?>
+<?php
+
+include "ortak/header.php";
+include_once "php/sunucu-bilgileri.php";
+// PDO bağlantısı oluştur
+try {
+    $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Bağlantı hatası: " . $e->getMessage());
+}
+
+?>
 
 <body class="inner-pages maxw1600 m0a dashboard-bd">
 <!-- Wrapper -->
@@ -46,10 +58,19 @@
                                 <div class="nice-select form-control wide" tabindex="0"><span
                                         class="current">İlan Tipi</span>
                                     <ul class="list">
-                                        <li data-value="Ev" class="option">Ev</li>
-                                        <li data-value="Ticari" class="option">Ticari</li>
-                                        <li data-value="Apartman" class="option">Apartman</li>
-                                        <li data-value="Garaj" class="option">Garaj</li>
+                                        <?php
+                                        $sql = "
+                                                SELECT * FROM ilan_tipleri where deleted = 0
+                                                    ";
+                                        $stmt = $pdo->prepare($sql);
+                                        $stmt->execute();
+                                        $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                        foreach ($row as $item) {?>
+                                            <li data-value="<?php echo $item['adi']; ?>" class="option"><?php echo $item['adi']; ?></li>
+                                            <?php
+                                        }
+                                        ?>
                                     </ul>
                                 </div>
                             </div>
@@ -78,6 +99,8 @@
                             <p class="no-mb">
                                 <label for="price">Fiyat</label>
                                 <input type="text" name="price" placeholder="TL (₺)" id="price">
+                                <span style="font-size: 11px;">Basamak ayırmak için (,) ve (.) kullanmayınız! <br>Doğru Örnek: 1.000.000 için 1000000 dır.</span>
+
                             </p>
                         </div>
                         <div class="col-lg-6 col-md-12">
@@ -99,11 +122,25 @@
                                 <input type="text" id="adress" name="address" placeholder="Adresinizi Girin" >
                             </p>
                         </div>
-                        <div class="col-lg-6 col-md-12">
-                            <p>
-                                <label for="city">Şehir</label>
-                                <input type="text" name="city" placeholder="Şehrinizi Girin" id="city">
-                            </p>
+                        <div class="col-lg-6 col-md-12 dropdown faq-drop">
+                                <div class="form-group sehir mt-2">
+                                    <div class="nice-select form-control wide" tabindex="0"><span
+                                                class="current">Sehir Seçin</span>
+                                        <ul class="list">
+                                            <?php
+                                            $sql = "SELECT * FROM sehirler where deleted = 0";
+                                            $stmt = $pdo->prepare($sql);
+                                            $stmt->execute();
+                                            $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                            foreach ($row as $item) {?>
+                                                <li data-value="<?php echo $item['adi']; ?>" class="option"><?php echo $item['adi']; ?></li>
+                                                <?php
+                                            }
+                                            ?>
+                                        </ul>
+                                    </div>
+                                </div>
                         </div>
                     </div>
                     <div class="row">
@@ -301,8 +338,8 @@ https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.5.2/css/fileinput.min.css
                 formData.append("price", $("#price").val());
                 formData.append("area", $("#area").val());
                 formData.append("address", $("#adress").val());
-                formData.append("city", $("#city").val());
-                formData.append("state", $("#state").val());
+                formData.append("city", $(".sehir .current").text());  //
+                formData.append("state",$("#state").val());
                 formData.append("country", $("#country").val());
                 formData.append("latitude", $("#latitude").val());
                 formData.append("longitude", $("#longitude").val());
@@ -463,12 +500,14 @@ https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.5.2/css/fileinput.min.css
                         $(".form-group.odasayisi .nice-select .current").text(response.data.oda_sayisi);
                         $(".form-group.odasayisi .nice-select .option[data-value='" + response.data.oda_sayisi + "']").addClass('selected');
 
+                        $(".form-group.sehir .nice-select .current").text(response.data.city);
+                        $(".form-group.sehir .nice-select .option[data-value='" + response.data.city + "']").addClass('selected');
+
 
                         $("#price").val(response.data.price);
                         $("#area").val(response.data.area);
                         $("#adress").val(response.data.address);
 
-                        $("#city").val(response.data.city);
                         $("#state").val(response.data.state);
                         $("#country").val(response.data.country);
                         $("#latitude").val(response.data.latitude);

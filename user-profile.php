@@ -1,4 +1,6 @@
-﻿<?php include "ortak/header.php"; ?>
+﻿<?php
+
+include "ortak/header.php"; ?>
 
 <body class="maxw1600 m0a dashboard-bd">
 <!-- Wrapper -->

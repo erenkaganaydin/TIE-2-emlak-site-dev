@@ -30,7 +30,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="index.html">
+                    <a href="logout.php">
                         <i class="fas fa-sign-out-alt mr-3"></i>Çıkış Yap
                     </a>
                 </li>
@@ -80,7 +80,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html">
+                                <a href="logout.php">
                                     <i class="fas fa-sign-out-alt"></i>Çıkış Yap
                                 </a>
                             </li>
