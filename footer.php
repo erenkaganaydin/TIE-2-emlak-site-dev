@@ -101,8 +101,7 @@
                                 <li><a href="about.php">Hakkımızda</a></li>
                             </ul>
                             <ul class="nav-right">
-                                <li><a href="agent-details.html">En Son İlan</a></li>
-                                <li><a href="about.php">En Çok İlan Olan İl</a></li>
+                                <li><a href="ilanlar.php?id=4">En Son İlan</a></li>
                             </ul>
                         </div>
                     </div>

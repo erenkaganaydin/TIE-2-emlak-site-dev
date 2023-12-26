@@ -25,12 +25,10 @@ include_once "header.php"
                 <div class="row">
                     <div class="col-lg-6 col-md-12 who-1">
                         <div>
-                            <h2 class="text-left mb-4">Hakkımızda <span>Find Houses</span></h2>
+                            <h2 class="text-left mb-4">Hakkımızda <span>Emlak Sitem</span></h2>
                         </div>
                         <div class="pftext">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum odio id voluptatibus incidunt cum? Atque quasi eum debitis optio ab. Esse itaque officiis tempora possimus odio rerum aperiam ratione, sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt.</p>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum odio id voluptatibus incidunt cum? Atque quasi eum debitis optio ab. Esse itaque officiis tempora possimus odio rerum aperiam ratione, sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt.</p>
+                            <p></p>
                         </div>
                         <div class="box bg-2">
                             <a href="about.html" class="text-center button button--moema button--text-thick button--text-upper button--size-s">read More</a>
@@ -109,8 +107,8 @@ include_once "header.php"
                         <div class="countr">
                             <i class="fa fa-home" aria-hidden="true"></i>
                             <div class="count-me">
-                                <p class="counter text-left">300</p>
-                                <h3>Sold Houses</h3>
+                                <p class="counter text-left">700</p>
+                                <h3>Satılan Yer</h3>
                             </div>
                         </div>
                     </div>
@@ -118,8 +116,8 @@ include_once "header.php"
                         <div class="countr">
                             <i class="fa fa-list" aria-hidden="true"></i>
                             <div class="count-me">
-                                <p class="counter text-left">400</p>
-                                <h3>Daily Listings</h3>
+                                <p class="counter text-left">10</p>
+                                <h3>Günlük Yeni İçerik</h3>
                             </div>
                         </div>
                     </div>
@@ -128,7 +126,7 @@ include_once "header.php"
                             <i class="fa fa-users" aria-hidden="true"></i>
                             <div class="count-me">
                                 <p class="counter text-left">250</p>
-                                <h3>Expert Agents</h3>
+                                <h3>Görüşülen İnsan</h3>
                             </div>
                         </div>
                     </div>
@@ -137,7 +135,7 @@ include_once "header.php"
                             <i class="fa fa-trophy" aria-hidden="true"></i>
                             <div class="count-me">
                                 <p class="counter text-left">200</p>
-                                <h3>Won Awars</h3>
+                                <h3>Başarılı Buluşma</h3>
                             </div>
                         </div>
                     </div>
@@ -146,159 +144,19 @@ include_once "header.php"
         </section>
         <!-- END SECTION COUNTER UP -->
 
-        <!-- START SECTION AGENTS -->
-        <section class="team">
-            <div class="container">
-                <div class="sec-title">
-                    <h2><span>Our </span>Team</h2>
-                    <p>We provide full service at every step.</p>
-                </div>
-                <div class="row team-all">
-                    <div class="col-lg-3 col-md-6 team-pro">
-                        <div class="team-wrap">
-                            <div class="team-img">
-                                <img src="images/team/t-5.jpg" alt="">
-                            </div>
-                            <div class="team-content">
-                                <div class="team-info">
-                                    <h3>Carls Jhons</h3>
-                                    <p>Financial Advisor</p>
-                                    <div class="team-socials">
-                                        <ul>
-                                            <li>
-                                                <a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                                <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <span><a href="team-details.html">View Profile</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 team-pro">
-                        <div class="team-wrap">
-                            <div class="team-img">
-                                <img src="images/team/t-6.jpg" alt="">
-                            </div>
-                            <div class="team-content">
-                                <div class="team-info">
-                                    <h3>Arling Tracy</h3>
-                                    <p>Acountant</p>
-                                    <div class="team-socials">
-                                        <ul>
-                                            <li>
-                                                <a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                                <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <span><a href="team-details.html">View Profile</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 team-pro pb-none">
-                        <div class="team-wrap">
-                            <div class="team-img">
-                                <img src="images/team/t-7.jpg" alt="">
-                            </div>
-                            <div class="team-content">
-                                <div class="team-info">
-                                    <h3>Mark Web</h3>
-                                    <p>Founder &amp; CEO</p>
-                                    <div class="team-socials">
-                                        <ul>
-                                            <li>
-                                                <a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                                <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <span><a href="team-details.html">View Profile</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 team-pro kat">
-                        <div class="team-wrap">
-                            <div class="team-img">
-                                <img src="images/team/t-8.jpg" alt="">
-                            </div>
-                            <div class="team-content">
-                                <div class="team-info">
-                                    <h3>Katy Grace</h3>
-                                    <p>Team Leader</p>
-                                    <div class="team-socials">
-                                        <ul>
-                                            <li>
-                                                <a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                                <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <span><a href="team-details.html">View Profile</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END SECTION AGENTS -->
 
         <!-- START SECTION TESTIMONIALS -->
         <section class="testimonials home18 bg-white">
             <div class="container">
                <div class="sec-title">
-                    <h2><span>Clients </span>Testimonials</h2>
-                    <p>We collect reviews from our customers.</p>
+                    <h2><span>Müsteri </span>Yorumlarımız</h2>
+                    <p>pek çok insan kazandık.</p>
                 </div>
                 <div class="owl-carousel style1">
                     <div class="test-1 pb-0 pt-0">
-                        <img src="images/testimonials/ts-1.jpg" alt="">
-                        <h3 class="mt-3 mb-0">Lisa Smith</h3>
-                        <h6 class="mt-1">New York</h6>
-                        <ul class="starts text-center mb-2">
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec.</p>
-                    </div>
-                    <div class="test-1 pb-0 pt-0">
                         <img src="images/testimonials/ts-2.jpg" alt="">
-                        <h3 class="mt-3 mb-0">Jhon Morris</h3>
-                        <h6 class="mt-1">Los Angeles</h6>
-                        <ul class="starts text-center mb-2">
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star-o"></i>
-                            </li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec.</p>
-                    </div>
-                    <div class="test-1 pt-0">
-                        <img src="images/testimonials/ts-3.jpg" alt="">
-                        <h3 class="mt-3 mb-0">Mary Deshaw</h3>
-                        <h6 class="mt-1">Chicago</h6>
+                        <h3 class="mt-3 mb-0">Mahmut Yazıcıoğu</h3>
+                        <h6 class="mt-1">İstanbul</h6>
                         <ul class="starts text-center mb-2">
                             <li><i class="fa fa-star"></i>
                             </li>
@@ -311,62 +169,9 @@ include_once "header.php"
                             <li><i class="fa fa-star"></i>
                             </li>
                         </ul>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec.</p>
+                        <p>Uzun süredir aradığım hayallerimdeki evi birlikte bulduk, verdikleri hizmetin değeri essiz!.</p>
                     </div>
-                    <div class="test-1 pt-0">
-                        <img src="images/testimonials/ts-4.jpg" alt="">
-                        <h3 class="mt-3 mb-0">Gary Steven</h3>
-                        <h6 class="mt-1">Philadelphia</h6>
-                        <ul class="starts text-center mb-2">
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star-o"></i>
-                            </li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec.</p>
-                    </div>
-                    <div class="test-1 pt-0">
-                        <img src="images/testimonials/ts-5.jpg" alt="">
-                        <h3 class="mt-3 mb-0">Cristy Mayer</h3>
-                        <h6 class="mt-1">San Francisco</h6>
-                        <ul class="starts text-center mb-2">
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec.</p>
-                    </div>
-                    <div class="test-1 pt-0">
-                        <img src="images/testimonials/ts-6.jpg" alt="">
-                        <h3 class="mt-3 mb-0">Ichiro Tasaka</h3>
-                        <h6 class="mt-1">Houston</h6>
-                        <ul class="starts text-center mb-2">
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star-o"></i>
-                            </li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec.</p>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -376,8 +181,7 @@ include_once "header.php"
         <div class="partners bg-white-2">
             <div class="container">
                 <div class="sec-title">
-                    <h2><span>Our </span>Partners</h2>
-                    <p>The Companies That Represent Us.</p>
+                    <h2><span>Bizi </span>Tercih Edenler</h2>
                 </div>
                 <div class="owl-carousel style2">
                     <div class="owl-item"><img src="images/partners/11.jpg" alt=""></div>
@@ -395,286 +199,78 @@ include_once "header.php"
         </div>
         <!-- END SECTION PARTNERS -->
 
-        <!-- START FOOTER -->
-        <footer class="first-footer">
-            <div class="top-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6">
-                            <div class="netabout">
-                                <a href="index.php" class="logo">
-                                    <img src="images/logo-footer.svg" alt="netcom">
-                                </a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum incidunt architecto soluta laboriosam, perspiciatis, aspernatur officiis esse.</p>
-                            </div>
-                            <div class="contactus">
-                                <ul>
-                                    <li>
-                                        <div class="info">
-                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            <p class="in-p">95 South Park Avenue, USA</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="info">
-                                            <i class="fa fa-phone" aria-hidden="true"></i>
-                                            <p class="in-p">+456 875 369 208</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="info">
-                                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                                            <p class="in-p ti">support@findhouses.com</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="navigation">
-                                <h3>Navigation</h3>
-                                <div class="nav-footer">
-                                    <ul>
-                                        <li><a href="index.php">Home One</a></li>
-                                        <li><a href="properties-right-sidebar.html">Properties Right</a></li>
-                                        <li><a href="properties-full-list.html">Properties List</a></li>
-                                        <li><a href="properties-details.html">Property Details</a></li>
-                                        <li class="no-mgb"><a href="agents-listing-grid.html">Agents Listing</a></li>
-                                    </ul>
-                                    <ul class="nav-right">
-                                        <li><a href="agent-details.html">Agents Details</a></li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="blog.html">Blog Default</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                        <li class="no-mgb"><a href="contact-us.php">Contact Us</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="widget">
-                                <h3>Twitter Feeds</h3>
-                                <div class="twitter-widget contuct">
-                                    <div class="twitter-area">
-                                        <div class="single-item">
-                                            <div class="icon-holder">
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
-                                                <h4>about 5 days ago</h4>
-                                            </div>
-                                        </div>
-                                        <div class="single-item">
-                                            <div class="icon-holder">
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
-                                                <h4>about 5 days ago</h4>
-                                            </div>
-                                        </div>
-                                        <div class="single-item">
-                                            <div class="icon-holder">
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
-                                                <h4>about 5 days ago</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="newsletters">
-                                <h3>Newsletters</h3>
-                                <p>Sign Up for Our Newsletter to get Latest Updates and Offers. Subscribe to receive news in your inbox.</p>
-                            </div>
-                            <form class="bloq-email mailchimp form-inline" method="post">
-                                <label for="subscribeEmail" class="error"></label>
-                                <div class="email">
-                                    <input type="email" id="subscribeEmail" name="EMAIL" placeholder="Enter Your Email">
-                                    <input type="submit" value="Subscribe">
-                                    <p class="subscription-success"></p>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="second-footer">
-                <div class="container">
-                    <p>2021 © Copyright - All Rights Reserved.</p>
-                    <ul class="netsocials">
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-
-        <a data-scroll="" href="#wrapper" class="go-up"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
-        <!-- END FOOTER -->
-
-        <!--register form -->
-        <div class="login-and-register-form modal">
-            <div class="main-overlay"></div>
-            <div class="main-register-holder">
-                <div class="main-register fl-wrap">
-                    <div class="close-reg"><i class="fa fa-times"></i></div>
-                    <h3>Welcome to <span>Find<strong>Houses</strong></span></h3>
-                    <div class="soc-log fl-wrap">
-                        <p>Login</p>
-                        <a href="#" class="facebook-log"><i class="fa fa-facebook-official"></i>Log in with Facebook</a>
-                        <a href="#" class="twitter-log"><i class="fa fa-twitter"></i> Log in with Twitter</a>
-                    </div>
-                    <div class="log-separator fl-wrap"><span>Or</span></div>
-                    <div id="tabs-container">
-                        <ul class="tabs-menu">
-                            <li class="current"><a href="#tab-1">Login</a></li>
-                            <li><a href="#tab-2">Register</a></li>
-                        </ul>
-                        <div class="tab">
-                            <div id="tab-1" class="tab-contents">
-                                <div class="custom-form">
-                                    <form method="post" name="registerform">
-                                        <label>Username or Email Address * </label>
-                                        <input name="email" type="text" onclick="this.select()" value="">
-                                        <label>Password * </label>
-                                        <input name="password" type="password" onclick="this.select()" value="">
-                                        <button type="submit" class="log-submit-btn"><span>Log In</span></button>
-                                        <div class="clearfix"></div>
-                                        <div class="filter-tags">
-                                            <input id="check-a" type="checkbox" name="check">
-                                            <label for="check-a">Remember me</label>
-                                        </div>
-                                    </form>
-                                    <div class="lost_password">
-                                        <a href="#">Lost Your Password?</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab">
-                                <div id="tab-2" class="tab-contents">
-                                    <div class="custom-form">
-                                        <form method="post" name="registerform" class="main-register-form" id="main-register-form2">
-                                            <label>First Name * </label>
-                                            <input name="name" type="text" onclick="this.select()" value="">
-                                            <label>Second Name *</label>
-                                            <input name="name2" type="text" onclick="this.select()" value="">
-                                            <label>Email Address *</label>
-                                            <input name="email" type="text" onclick="this.select()" value="">
-                                            <label>Password *</label>
-                                            <input name="password" type="password" onclick="this.select()" value="">
-                                            <button type="submit" class="log-submit-btn"><span>Register</span></button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--register form end -->
-
-        <!-- ARCHIVES JS -->
-        <script src="js/jquery-3.5.1.min.js"></script>
-        <script src="js/tether.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/mmenu.min.js"></script>
-        <script src="js/mmenu.js"></script>
-        <script src="js/smooth-scroll.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/popup.js"></script>
-        <script src="js/jquery.waypoints.min.js"></script>
-        <script src="js/jquery.counterup.min.js"></script>
-        <script src="js/counterup.js"></script>
-        <script src="js/owl.carousel.js"></script>
-        <script src="js/ajaxchimp.min.js"></script>
-        <script src="js/newsletter.js"></script>
-        <script src="js/color-switcher.js"></script>
-        <script src="js/inner.js"></script>
+        <?php
+        include_once "footer.php"
+        ?>
 
         <script>
-            $('.style1').owlCarousel({
-                loop: true,
-                margin: 10,
-                autoplay: false,
-                autoplayTimeout: 5000,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    400: {
-                        items: 1,
-                        margin: 20
-                    },
-                    500: {
-                        items: 1,
-                        margin: 20
-                    },
-                    768: {
-                        items: 1,
-                        margin: 20
-                    },
-                    991: {
-                        items: 1,
-                        margin: 20
-                    },
-                    1000: {
-                        items: 1,
-                        margin: 20
-                    }
-                }
-            });
+    $('.style1').owlCarousel({
+        loop: true,
+        margin: 10,
+        autoplay: false,
+        autoplayTimeout: 5000,
+        responsive: {
+            0: {
+                items: 1
+            },
+            400: {
+                items: 1,
+                margin: 20
+            },
+            500: {
+                items: 1,
+                margin: 20
+            },
+            768: {
+                items: 1,
+                margin: 20
+            },
+            991: {
+                items: 1,
+                margin: 20
+            },
+            1000: {
+                items: 1,
+                margin: 20
+            }
+        }
+    });
 
-        </script>
-        <script>
-            $('.style2').owlCarousel({
-                loop: true,
-                margin: 0,
-                dots: false,
-                autoWidth: false,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                responsive: {
-                    0: {
-                        items: 2,
-                        margin: 20
-                    },
-                    400: {
-                        items: 2,
-                        margin: 20
-                    },
-                    500: {
-                        items: 3,
-                        margin: 20
-                    },
-                    768: {
-                        items: 4,
-                        margin: 20
-                    },
-                    992: {
-                        items: 5,
-                        margin: 20
-                    },
-                    1000: {
-                        items: 6,
-                        margin: 20
-                    }
-                }
-            });
+</script>
+<script>
+    $('.style2').owlCarousel({
+        loop: true,
+        margin: 0,
+        dots: false,
+        autoWidth: false,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        responsive: {
+            0: {
+                items: 2,
+                margin: 20
+            },
+            400: {
+                items: 2,
+                margin: 20
+            },
+            500: {
+                items: 3,
+                margin: 20
+            },
+            768: {
+                items: 4,
+                margin: 20
+            },
+            992: {
+                items: 5,
+                margin: 20
+            },
+            1000: {
+                items: 6,
+                margin: 20
+            }
+        }
+    });
 
-        </script>
-
-    </div>
-    <!-- Wrapper / End -->
-</body>
-
-</html>
+</script>
