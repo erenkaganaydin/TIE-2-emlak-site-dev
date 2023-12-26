@@ -109,7 +109,7 @@
             <div class="portfolio right-slider">
                 <div class="owl-carousel home5-right-slider">
                     <div class="inner-box">
-                        <a class="recent-16" data-aos="fade-up" data-aos-delay="150" href="single-property-1.html">
+                        <a class="recent-16" data-aos="fade-up" data-aos-delay="150" href="ilan-detay.php">
                             <div class="recent-img16 img-fluid img-center"
                                  style="background-image: url(images/interior/p-1.jpg);"></div>
                             <div class="recent-content"></div>
@@ -121,7 +121,7 @@
                             <div class="view-proper">İncele</div>
                         </a>
                     </div>
-                    <a class="recent-16" data-aos="fade-up" data-aos-delay="250" href="single-property-1.html">
+                    <a class="recent-16" data-aos="fade-up" data-aos-delay="250" href="ilan-detay.php">
                         <div class="recent-img16 img-center"
                              style="background-image: url(images/interior/p-2.jpg);"></div>
                         <div class="recent-content"></div>
@@ -132,7 +132,7 @@
                         </div>
                         <div class="view-proper">İncele</div>
                     </a>
-                    <a class="recent-16" data-aos="fade-up" data-aos-delay="350" href="single-property-1.html">
+                    <a class="recent-16" data-aos="fade-up" data-aos-delay="350" href="ilan-detay.php">
                         <div class="recent-img16 img-center"
                              style="background-image: url(images/interior/p-3.jpg);"></div>
                         <div class="recent-content"></div>

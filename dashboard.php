@@ -113,7 +113,20 @@ include "ortak/header.php"; ?>
                                         </div>
                                         </a>
                                     </div>
-
+                                    <div class="col-lg-5 col-md-5 col-xs-12 dar pro" style="background-color: #1eabc3">
+                                        <a href="./gelen-mesajlar.php">
+                                            <div class="item">
+                                                <div class="icon">
+                                                    <i class="fa fa-list" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="info">
+                                                    <h6 class="number" style="margin-top: 7px;">
+                                                        Mesajlar
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -5,13 +5,13 @@
             <button class="dropbtn" onclick="myFunction()"><i class="fa fa-bars pr10 mr-2"></i> Mobil Menü</button>
             <ul class="dropdown-content" id="myDropdown">
                 <li>
-                    <a href="dashboard.php">
-                        <i class="fa fa-map-marker mr-3"></i> Anasayfa
+                    <a href="index.php">
+                        <i class="fa fa-truck"></i> Siteye Git
                     </a>
                 </li>
                 <li>
-                    <a href="user-profile.php">
-                        <i class="fa fa-user mr-3"></i>Bilgilerim
+                    <a href="dashboard.php">
+                        <i class="fa fa-map-marker mr-3"></i> Anasayfa
                     </a>
                 </li>
                 <li>
@@ -22,6 +22,16 @@
                 <li>
                     <a href="add-property.php">
                         <i aria-hidden="true" class="fa fa-list mr-3"></i>İlan Ekle
+                    </a>
+                </li>
+                <li>
+                    <a href="gelen-mesajlar.php">
+                        <i aria-hidden="true" class="fa fa-pencil mr-3"></i>Gelen Mesajlar
+                    </a>
+                </li>
+                <li>
+                    <a href="user-profile.php">
+                        <i class="fa fa-user mr-3"></i>Bilgilerim
                     </a>
                 </li>
                 <li>
@@ -55,13 +65,13 @@
                     <div class="detail clearfix">
                         <ul class="mb-0" id="userMiniNav">
                             <li>
-                                <a href="dashboard.php">
-                                    <i class="fa fa-map-marker"></i> Anasayfa
+                                <a href="index.php">
+                                    <i class="fa fa-truck"></i> Siteye Git
                                 </a>
                             </li>
                             <li>
-                                <a href="user-profile.php">
-                                    <i class="fa fa-user"></i>Bilgilerim
+                                <a href="dashboard.php">
+                                    <i class="fa fa-map-marker"></i> Anasayfa
                                 </a>
                             </li>
                             <li>
@@ -72,6 +82,16 @@
                             <li>
                                 <a href="add-property.php">
                                     <i aria-hidden="true" class="fa fa-list"></i>İlan Ekle
+                                </a>
+                            </li>
+                            <li>
+                                <a href="gelen-mesajlar.php">
+                                    <i aria-hidden="true" class="fa fa-pencil mr-3"></i>Gelen Mesajlar
+                                </a>
+                            </li>
+                            <li>
+                                <a href="user-profile.php">
+                                    <i class="fa fa-user"></i>Bilgilerim
                                 </a>
                             </li>
                             <li>
@@ -86,6 +106,7 @@
                             </li>
                         </ul>
                     </div>
+
                 </div>
             </div>
 

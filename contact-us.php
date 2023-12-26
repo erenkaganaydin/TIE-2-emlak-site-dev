@@ -53,9 +53,9 @@ $bilgiler = $stmt->fetch(PDO::FETCH_ASSOC);
                                 <input type="text" class="form-control input-custom input-full" name="telefon" placeholder="Telefon numaranız">
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control textarea-custom input-full" id="ccomment" name="message" required="" rows="8" placeholder="Mesajınız (varsa)"></textarea>
+                                <textarea class="form-control textarea-custom input-full"  name="message" rows="8" placeholder="Mesajınız (varsa)"></textarea>
                             </div>
-                            <button type="submit" id="submit-contact" class="btn btn-primary btn-lg">Gönder</button>
+                            <button type="submit" class="btn btn-primary btn-lg">Gönder</button>
                         </form>
                     </div>
                     <div class="col-lg-4 col-md-12 bgc">
@@ -105,15 +105,17 @@ $bilgiler = $stmt->fetch(PDO::FETCH_ASSOC);
 
                 // AJAX isteği gönder
                 var xhr = new XMLHttpRequest();
-                xhr.open("POST", "submit.php", true); // submit.php'yi kendi işlediğiniz PHP dosyasının yoluyla değiştirin
+                xhr.open("POST", "./php/mesaj-kaydet.php", true); // submit.php'yi kendi işlediğiniz PHP dosyasının yoluyla değiştirin
 
                 xhr.onload = function() {
                     if (xhr.status >= 200 && xhr.status < 300) {
                         // İsteğin başarıyla tamamlandığı durumu işleyin
                         console.log(xhr.responseText);
+                        alert(xhr.responseText);
                     } else {
                         // Hata durumu
                         console.error(xhr.statusText);
+                        alert("İşleminiz tamamlanamadı !");
                     }
                 };
 

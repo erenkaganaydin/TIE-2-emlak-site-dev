@@ -18,7 +18,7 @@ try {
     $message = $_POST['message'];
 
     // Veritabanına ekleme sorgusu
-    $sql = "INSERT INTO contact_messages (name, lastname, email, telefon, message) VALUES (:name, :lastname, :email, :telefon, :message)";
+    $sql = "INSERT INTO mesajlar (name, lastname, email, telefon, message) VALUES (:name, :lastname, :email, :telefon, :message)";
 
     // Sorguyu hazırla
     $stmt = $conn->prepare($sql);

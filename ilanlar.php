@@ -138,7 +138,7 @@ if(isset($_POST['filtreler']))
                     foreach ($row as $item) {?>
                     <div class="item col-lg-4 col-md-6 col-xs-12 landscapes sale">
                         <div class="project-single mb-0" data-aos="fade-up">
-                            <a href="single-property-1.html" class="recent-16">
+                            <a href="ilan-detay.php" class="recent-16">
                                 <div class="recent-img16 img-center" style="background-image: url(images/interior/p-1.jpg);"></div>
                                 <div class="recent-content"></div>
                                 <div class="recent-details">
