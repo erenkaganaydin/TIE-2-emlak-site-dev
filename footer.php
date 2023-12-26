@@ -97,12 +97,12 @@
                         <div class="nav-footer">
                             <ul>
                                 <li><a href="index.html">Anasayfa</a></li>
-                                <li><a href="properties-right-sidebar.html">Tüm İlanlar</a></li>
-                                <li><a href="properties-full-list.html">Hakkımızda</a></li>
+                                <li><a href="ilanlar.php">Tüm İlanlar</a></li>
+                                <li><a href="about.php">Hakkımızda</a></li>
                             </ul>
                             <ul class="nav-right">
                                 <li><a href="agent-details.html">En Son İlan</a></li>
-                                <li><a href="about.html">En Çok İlan Olan İl</a></li>
+                                <li><a href="about.php">En Çok İlan Olan İl</a></li>
                             </ul>
                         </div>
                     </div>
