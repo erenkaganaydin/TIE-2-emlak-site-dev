@@ -57,18 +57,18 @@ include_once "header.php"
         <section class="how-it-works bg-white-2">
             <div class="container">
                 <div class="sec-title">
-                    <h2><span>Why </span>Choose Us</h2>
-                    <p>We provide full service at every step.</p>
+                    <h2><span>Neden </span>Biz?</h2>
+                    <p>Hayalinizdeki yeri neden birlikte aramalıyız ?</p>
                 </div>
                 <div class="row service-1">
                     <article class="col-lg-4 col-md-6 col-xs-12 serv" data-aos="fade-up">
                         <div class="serv-flex">
                             <div class="art-1 img-13">
                                 <img src="images/icons/icon-4.svg" alt="">
-                                <h3>Wide Renge Of Properties</h3>
+                                <h3>Anahtar Teslim</h3>
                             </div>
                             <div class="service-text-p">
-                                <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
+                                <p class="text-center">Siz hayallerinizdeki yeri buluduğunuzda, sizin için gerekli tüm işlemleri tamamlaıyoruz. Size sadece hayalinizin keyfini sürmek kalıyor.</p>
                             </div>
                         </div>
                     </article>
@@ -76,10 +76,10 @@ include_once "header.php"
                         <div class="serv-flex">
                             <div class="art-1 img-14">
                                 <img src="images/icons/icon-5.svg" alt="">
-                                <h3>Trusted by thousands</h3>
+                                <h3>Güven Faktörü</h3>
                             </div>
                             <div class="service-text-p">
-                                <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
+                                <p class="text-center">Sahip olduğumuz tecrübe ile yaşayabileceğiniz tüm sorunları ön görüyor ve gerekli önemleri alıyoruz.Size, hiç bir şeyi düşünmeden sadece hayallerinizi yaşamak kalıyor..</p>
                             </div>
                         </div>
                     </article>
@@ -87,10 +87,10 @@ include_once "header.php"
                         <div class="serv-flex arrow">
                             <div class="art-1 img-15">
                                 <img src="images/icons/icon-6.svg" alt="">
-                                <h3>Financing made easy</h3>
+                                <h3>7/24 Destek</h3>
                             </div>
                             <div class="service-text-p">
-                                <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
+                                <p class="text-center">Dilediğiniz zaman, sesli ve yazılı kanallardan bize ulaşabiliyor ve tüm sorunlarınızda kesintisiz destek alabiliyorsunuz.</p>
                             </div>
                         </div>
                     </article>
