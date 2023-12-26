@@ -34,62 +34,8 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <!--
-                    <div class="widget">
-                        <h3>Twitter Feeds</h3>
-                        <div class="twitter-widget contuct">
-                            <div class="twitter-area">
-                                <div class="single-item">
-                                    <div class="icon-holder">
-                                        <i aria-hidden="true" class="fa fa-twitter"></i>
-                                    </div>
-                                    <div class="text">
-                                        <h5><a href="#">@findhouses</a> all share them with me baby said inspet.
-                                        </h5>
-                                        <h4>about 5 days ago</h4>
-                                    </div>
-                                </div>
-                                <div class="single-item">
-                                    <div class="icon-holder">
-                                        <i aria-hidden="true" class="fa fa-twitter"></i>
-                                    </div>
-                                    <div class="text">
-                                        <h5><a href="#">@findhouses</a> all share them with me baby said inspet.
-                                        </h5>
-                                        <h4>about 5 days ago</h4>
-                                    </div>
-                                </div>
-                                <div class="single-item">
-                                    <div class="icon-holder">
-                                        <i aria-hidden="true" class="fa fa-twitter"></i>
-                                    </div>
-                                    <div class="text">
-                                        <h5><a href="#">@findhouses</a> all share them with me baby said inspet.
-                                        </h5>
-                                        <h4>about 5 days ago</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    -->
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <!--
-                    <div class="newsletters">
-                        <h3>Newsletters</h3>
-                        <p>Sign Up for Our Newsletter to get Latest Updates and Offers. Subscribe to receive news in
-                            your inbox.</p>
-                    </div>
-                    <form class="bloq-email mailchimp form-inline" method="post">
-                        <label class="error" for="subscribeEmail"></label>
-                        <div class="email">
-                            <input id="subscribeEmail" name="EMAIL" placeholder="Enter Your Email" type="email">
-                            <input type="submit" value="Subscribe">
-                            <p class="subscription-success"></p>
-                        </div>
-                    </form>
-                    -->
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="navigation">
