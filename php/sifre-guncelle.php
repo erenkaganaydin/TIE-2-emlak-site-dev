@@ -21,11 +21,11 @@ try {
     if ($row) {
         $dbPassword = $row['Sifre'];
         // Mevcut şifre doğruysa güncelleme işlemini yap
-        if ($currentPassword == $dbPassword) { // Hashlersek if (password_verify($currentPassword, $dbPassword)) {
+        if ($currentPassword == $dbPassword) {
+            // Hash lersek if (password_verify($currentPassword, $dbPassword)) {
             // Yeni şifre ve tekrarı eşleşiyorsa güncelle
             if ($newPassword == $confirmNewPassword) {
-                // Yeni şifreyi hashle
-                //$hashedNewPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+                //Hash lersek $hashedNewPassword = password_hash($newPassword, PASSWORD_DEFAULT);
                 $hashedNewPassword = $newPassword;
 
                 // Şifreyi güncelle

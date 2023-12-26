@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // AJAX isteği ile gönderilen resim ID'sini al
     $resimId = $_POST['resim_id'];
 
-    // Burada veritabanından resmi silme işlemini gerçekleştirin
+    // veritabanından resmi silme işlemi
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo json_encode($response);
 } else {
     // Sayfaya doğrudan erişim engelle
-    header("HTTP/1.1 403 Forbidden");
+    header("HTTP/1.1 403 Forbidden");  //404 de döndürebiliriz
     exit;
 }
 ?>
