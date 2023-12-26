@@ -12,24 +12,20 @@ try {
     if (isset($_POST['tumu'])) {
         // SQL sorgusu oluştur
         $sql = "SELECT * FROM ilanlar
-INNER JOIN (
-    SELECT ilan_id, MIN(id) AS min_resim_id
-    FROM ilan_resimleri
-    GROUP BY ilan_id
-) AS T ON ilanlar.id = T.ilan_id
-INNER JOIN ilan_resimleri ON ilan_resimleri.id = T.min_resim_id
-WHERE ilanlar.deleted = 0
-ORDER BY ilanlar.tarih DESC;
-";
-
-        // Sorguyu hazırla
+            INNER JOIN (
+                SELECT ilan_id, MIN(id) AS min_resim_id
+                FROM ilan_resimleri
+                GROUP BY ilan_id
+            ) AS T ON ilanlar.id = T.ilan_id
+            INNER JOIN ilan_resimleri ON ilan_resimleri.id = T.min_resim_id
+            WHERE ilanlar.deleted = 0
+            ORDER BY ilanlar.tarih DESC;
+            ";
         $stmt = $conn->prepare($sql);
-
-        // Sorguyu çalıştır
         $stmt->execute();
-
-        // İlk kaydı getir
         $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
 
         // Eğer bir kayıt varsa, bilgileri döndür
         if ($row) {

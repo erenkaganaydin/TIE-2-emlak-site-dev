@@ -13,7 +13,7 @@
                     </div>
                     <div class="sidebar-widget author-widget2">
                         <div class="author-box clearfix">
-                            <img alt="author-image" class="author__img" src="images/testimonials/ts-1.jpg">
+                            <img alt="author-image" class="author__img" src="images/1.png">
                             <h4 class="author__title" id="adSoyadBilgisi">Ad Soyad</h4>
                             <p class="author__meta">Yönetici Kullanıcı</p>
                         </div>
@@ -61,6 +61,7 @@
                     // Populate form fields with existing data
                     $('#AdSoyad').val(response.data.AdSoyad);
                     $('#adSoyadBilgisi').html(response.data.AdSoyad);
+                    $('#navbarAdSoyad').html(response.data.AdSoyad);
                     $('#Telefon').val(response.data.Telefon);
                     $('#telefonBilgisi').html(response.data.Telefon);
                     $('#EPosta').val(response.data.EPosta);

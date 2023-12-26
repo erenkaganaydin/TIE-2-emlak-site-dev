@@ -8,6 +8,7 @@
 
     <div class="col-lg-9 col-md-12 col-xs-12 royal-add-property-area section_100 pl-0 user-dash2">
         <form id="ilan-formu" method="post" enctype="multipart/form-data">
+            <input type="hidden" id="ilan_id" name="ilan_id" value="<?php echo $_GET['id']; ?>">
             <div class="single-add-property">
                 <h3>İlan Detayları ve Fiyat</h3>
                 <div class="property-form-group">
@@ -63,6 +64,10 @@
                                         <li data-value="3" class="option">3</li>
                                         <li data-value="4" class="option">4</li>
                                         <li data-value="5" class="option">5</li>
+                                        <li data-value="6" class="option">6</li>
+                                        <li data-value="7" class="option">7</li>
+                                        <li data-value="8" class="option">8</li>
+                                        <li data-value="9" class="option">9</li>
                                     </ul>
                                 </div>
                             </div>
@@ -140,13 +145,13 @@
                                 <div class="nice-select form-control wide" tabindex="0"><span
                                         class="current">Yaş Seçiniz</span>
                                     <ul class="list">
-                                        <li data-value="1" class="option">0-1 yıl</li>
-                                        <li data-value="2" class="option">0-5 yıl</li>
-                                        <li data-value="1" class="option">0-10 yıl</li>
-                                        <li data-value="2" class="option">0-15 yıl</li>
-                                        <li data-value="1" class="option">0-20 yıl</li>
-                                        <li data-value="2" class="option">0-50 yıl</li>
-                                        <li data-value="1" class="option">50+ yıl</li>
+                                        <li data-value="0-1 yıl" class="option">0-1 yıl</li>
+                                        <li data-value="1-5 yıl" class="option">1-5 yıl</li>
+                                        <li data-value="5-10 yıl" class="option">5-10 yıl</li>
+                                        <li data-value="10-15 yıl" class="option">10-15 yıl</li>
+                                        <li data-value="15-20 yıl" class="option">15-20 yıl</li>
+                                        <li data-value="20-50 yıl" class="option">20-50 yıl</li>
+                                        <li data-value="50+ yıl" class="option">50+ yıl</li>
                                     </ul>
                                 </div>
                             </div>
@@ -158,10 +163,13 @@
                                     <ul class="list">
                                         <li data-value="1" class="option">1</li>
                                         <li data-value="2" class="option">2</li>
-                                        <li data-value="1" class="option">3</li>
-                                        <li data-value="2" class="option">4</li>
-                                        <li data-value="1" class="option">5</li>
-                                        <li data-value="2" class="option">6</li>
+                                        <li data-value="3" class="option">3</li>
+                                        <li data-value="4" class="option">4</li>
+                                        <li data-value="5" class="option">5</li>
+                                        <li data-value="6" class="option">6</li>
+                                        <li data-value="7" class="option">7</li>
+                                        <li data-value="8" class="option">8</li>
+                                        <li data-value="9" class="option">9</li>
                                     </ul>
                                 </div>
                             </div>
@@ -172,10 +180,13 @@
                                     <ul class="list">
                                         <li data-value="1" class="option">1</li>
                                         <li data-value="2" class="option">2</li>
-                                        <li data-value="1" class="option">3</li>
-                                        <li data-value="2" class="option">4</li>
-                                        <li data-value="1" class="option">5</li>
-                                        <li data-value="2" class="option">6</li>
+                                        <li data-value="3" class="option">3</li>
+                                        <li data-value="4" class="option">4</li>
+                                        <li data-value="5" class="option">5</li>
+                                        <li data-value="6" class="option">6</li>
+                                        <li data-value="7" class="option">7</li>
+                                        <li data-value="8" class="option">8</li>
+                                        <li data-value="9" class="option">9</li>
                                     </ul>
                                 </div>
                             </div>
@@ -188,87 +199,8 @@
                 <div class="property-form-group">
                     <div class="row">
                         <div class="col-md-12">
-                            <ul class="pro-feature-add pl-0">
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-a" data-ozellik="Klima" type="checkbox" name="check">
-                                            <label for="check-a">Klima</label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-b" type="checkbox" name="check">
-                                            <label for="check-b">Yüzme Havuzu</label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-c" type="checkbox" name="check">
-                                            <label for="check-c">Merkezi Isıtma</label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-d" type="checkbox" name="check">
-                                            <label for="check-d">Çamaşır Odası</label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-e" type="checkbox" name="check">
-                                            <label for="check-e">Spor Salonu</label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-g" type="checkbox" name="check">
-                                            <label for="check-g">Alarm</label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-h" type="checkbox" name="check">
-                                            <label for="check-h">Pencere Kaplaması</label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-i" type="checkbox" name="check">
-                                            <label for="check-i">Buzdolabı</label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-j" type="checkbox" name="check">
-                                            <label for="check-j">TV Kablosu & WIFI</label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-k" type="checkbox" name="check">
-                                            <label for="check-k">Mikrodalga Fırın</label>
-                                        </div>
-                                    </div>
-                                </li>
+                            <ul class="pro-feature-add pl-0" id="ozelliklerListesi">
+
                             </ul>
                         </div>
                     </div>
@@ -311,8 +243,11 @@
                 <h3>İlan Resimleri</h3>
                 <div class="property-form-group">
                     <div class="row">
-                        <div class="col-lg-12 col-md-12">
-                            <label for="resimler">Resimler:</label>
+                        <div class="col-lg-12 col-md-12 row" id="oncekiResimler">
+
+                        </div>
+                        <div class="col-lg-12 col-md-12 mt-5">
+                            <label for="resimler">Tekrar Yükle:</label>
                             <input id="resimler" name="resimler[]" type="file" multiple class="file" data-show-upload="false" data-show-caption="true" data-msg-placeholder="Select {files} for upload...">
                         </div>
                     </div>
@@ -357,6 +292,7 @@ https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.5.2/css/fileinput.min.css
 
                 // Form verilerini al
                 var formData = new FormData();
+                formData.append("ilan_id", $("#ilan_id").val());
                 formData.append("baslik", $("#baslik").val());
                 formData.append("aciklama", $("#aciklama").val());
                 formData.append("ilan_durumu", $(".ilan_durum .current").text());
@@ -364,7 +300,7 @@ https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.5.2/css/fileinput.min.css
                 formData.append("oda_sayisi", $(".odasayisi .current").text());
                 formData.append("price", $("#price").val());
                 formData.append("area", $("#area").val());
-                formData.append("address", $("#address").val());
+                formData.append("address", $("#adress").val());
                 formData.append("city", $("#city").val());
                 formData.append("state", $("#state").val());
                 formData.append("country", $("#country").val());
@@ -397,10 +333,12 @@ https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.5.2/css/fileinput.min.css
                     data: formData,
                     contentType: false,
                     processData: false,
+                    dataType: 'json', // Assuming your API returns JSON
                     success: function (response) {
                         // Başarılı cevap
-                        console.log(response);
+                        console.log(response.message);
                         alert(response.message);
+                        bilgileriGetir();
                     },
                     error: function (error) {
                         // Hata durumu
@@ -433,8 +371,71 @@ https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.5.2/css/fileinput.min.css
 
     <script>
         $(document).ready(function () {
-            bilgileriGetir();
+            ozellikleriGetir();
+
+            // Silme butonuna tıklandığında
+            $('#oncekiResimler').on('click', '.sil-button', function () {
+                var resimId = $(this).data('resim-id');
+
+                // AJAX isteği göndererek resmi silme işlemini yap
+                $.ajax({
+                    type: 'POST',
+                    url: './php/sil-resim.php',  // Silme işlemini gerçekleştirecek PHP dosyasının yolu
+                    data: {resim_id: resimId},
+                    dataType: 'json',
+                    success: function (response) {
+                        if (response.success) {
+                            console.log('Resim başarıyla silindi.');
+                            // Silme işleminden sonra tekrar bilgileri getirerek sayfayı güncelle
+                            bilgileriGetir();
+                        } else {
+                            console.log('Resim silme başarısız.');
+                        }
+                    },
+                    error: function (error) {
+                        console.log('Hata:', error.responseText);
+                    }
+                });
+            });
+
+
         });
+
+        function ozellikleriGetir()
+        {
+            $.ajax({
+                type: 'GET',
+                url: './php/ozellikler.php',
+                dataType: 'json',
+                success: function (response) {
+                    // Özellikleri listeye ekle
+                    response.forEach(function (ozellik) {
+                        var checkboxId = 'check-' + ozellik.toLowerCase();
+                        var labelFor = 'check-' + ozellik.toLowerCase();
+
+                        var listItem = $('<li class="fl-wrap filter-tags clearfix"></li>');
+                        var checkboxes = $('<div class="checkboxes float-left"></div>');
+                        var filterTagsWrap = $('<div class="filter-tags-wrap"></div>');
+                        var inputCheckbox = $('<input id="' + checkboxId + '" data-ozellik="' + ozellik + '" type="checkbox" name="check">');
+                        var label = $('<label for="' + labelFor + '">' + ozellik + '</label>');
+
+                        // HTML yapısını oluşturulan öğeleri birleştir
+                        filterTagsWrap.append(inputCheckbox);
+                        filterTagsWrap.append(label);
+                        checkboxes.append(filterTagsWrap);
+                        listItem.append(checkboxes);
+
+                        // Listeye ekle
+                        $('#ozelliklerListesi').append(listItem);
+                    });
+
+                    bilgileriGetir();
+                },
+                error: function (error) {
+                    console.log('Error fetching data: ' + error.responseText);
+                }
+            });
+        }
 
         function bilgileriGetir() {
             $.ajax({
@@ -446,6 +447,7 @@ https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.5.2/css/fileinput.min.css
                     if (response.success) {
                         // Populate form fields with existing data
                         console.log(response.data);
+                        console.log(response.ozellikler);
                         $("#baslik").val(response.data.baslik);
                         $("#aciklama").val(response.data.aciklama);
 
@@ -485,6 +487,40 @@ https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.5.2/css/fileinput.min.css
                         $("#con-user").val(response.data.kullanici_adi);
                         $("#con-email").val(response.data.email);
                         $("#con-phn").val(response.data.telefon);
+
+                        if (response.ozellikler && response.ozellikler.length > 0) {
+                            console.log("ozellik");
+                            response.ozellikler.forEach(function (ozellik) {
+                                // Özellik adını alın ve küçük harfe çevirin
+                                var ozellikAdi = ozellik.ozellik;
+
+                                // Veri özelliğine sahip checkbox'ı bulun ve işaretleyin
+                                $("[data-ozellik='" + ozellikAdi + "']").prop("checked", true);
+                            });
+                        }
+
+                        var resimDiv = $('#oncekiResimler');
+                        resimDiv.empty(); // Önceki resimleri temizle
+
+                        response.resimler.forEach(function (resim) {
+                            // Her resim için bir div oluşturun
+                            var imgDiv = $('<div class="col-3">').addClass('resim-container');
+
+                            // Resmi gösteren bir img elementi oluşturun
+                            var imgElement = $('<img>').attr('src', resim.resim_path);
+
+                            // Silme butonunu oluşturun ve bir data attribute ekleyin
+                            var silButtonDiv = $('<div> ').addClass('prperty-submit-button');
+                            var silButton = $('<button type="button">').text('Sil').addClass('sil-button').data('resim-id', resim.id);
+
+                            // Oluşturulan elementleri div içine ekleyin
+                            imgDiv.append(imgElement);
+                            imgDiv.append(silButtonDiv);
+                            silButtonDiv.append(silButton);
+
+                            // Div'i ana div'e ekleyin
+                            resimDiv.append(imgDiv);
+                        });
                     } else {
                         // Handle the case where no data is found
                         console.log('No data found');

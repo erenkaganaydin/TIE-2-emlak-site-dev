@@ -63,6 +63,10 @@
                                         <li data-value="3" class="option">3</li>
                                         <li data-value="4" class="option">4</li>
                                         <li data-value="5" class="option">5</li>
+                                        <li data-value="6" class="option">6</li>
+                                        <li data-value="7" class="option">7</li>
+                                        <li data-value="8" class="option">8</li>
+                                        <li data-value="9" class="option">9</li>
                                     </ul>
                                 </div>
                             </div>
@@ -140,13 +144,13 @@
                                 <div class="nice-select form-control wide" tabindex="0"><span
                                             class="current">Yaş Seçiniz</span>
                                     <ul class="list">
-                                        <li data-value="1" class="option">0-1 yıl</li>
-                                        <li data-value="2" class="option">0-5 yıl</li>
-                                        <li data-value="1" class="option">0-10 yıl</li>
-                                        <li data-value="2" class="option">0-15 yıl</li>
-                                        <li data-value="1" class="option">0-20 yıl</li>
-                                        <li data-value="2" class="option">0-50 yıl</li>
-                                        <li data-value="1" class="option">50+ yıl</li>
+                                        <li data-value="0-1 yıl" class="option">0-1 yıl</li>
+                                        <li data-value="1-5 yıl" class="option">1-5 yıl</li>
+                                        <li data-value="5-10 yıl" class="option">5-10 yıl</li>
+                                        <li data-value="10-15 yıl" class="option">10-15 yıl</li>
+                                        <li data-value="15-20 yıl" class="option">15-20 yıl</li>
+                                        <li data-value="20-50 yıl" class="option">20-50 yıl</li>
+                                        <li data-value="50+ yıl" class="option">50+ yıl</li>
                                     </ul>
                                 </div>
                             </div>
@@ -158,10 +162,13 @@
                                     <ul class="list">
                                         <li data-value="1" class="option">1</li>
                                         <li data-value="2" class="option">2</li>
-                                        <li data-value="1" class="option">3</li>
-                                        <li data-value="2" class="option">4</li>
-                                        <li data-value="1" class="option">5</li>
-                                        <li data-value="2" class="option">6</li>
+                                        <li data-value="3" class="option">3</li>
+                                        <li data-value="4" class="option">4</li>
+                                        <li data-value="5" class="option">5</li>
+                                        <li data-value="6" class="option">6</li>
+                                        <li data-value="7" class="option">7</li>
+                                        <li data-value="8" class="option">8</li>
+                                        <li data-value="9" class="option">9</li>
                                     </ul>
                                 </div>
                             </div>
@@ -172,10 +179,13 @@
                                     <ul class="list">
                                         <li data-value="1" class="option">1</li>
                                         <li data-value="2" class="option">2</li>
-                                        <li data-value="1" class="option">3</li>
-                                        <li data-value="2" class="option">4</li>
-                                        <li data-value="1" class="option">5</li>
-                                        <li data-value="2" class="option">6</li>
+                                        <li data-value="3" class="option">3</li>
+                                        <li data-value="4" class="option">4</li>
+                                        <li data-value="5" class="option">5</li>
+                                        <li data-value="6" class="option">6</li>
+                                        <li data-value="7" class="option">7</li>
+                                        <li data-value="8" class="option">8</li>
+                                        <li data-value="9" class="option">9</li>
                                     </ul>
                                 </div>
                             </div>
@@ -188,87 +198,8 @@
                 <div class="property-form-group">
                     <div class="row">
                         <div class="col-md-12">
-                            <ul class="pro-feature-add pl-0">
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                                <input id="check-a" data-ozellik="Klima" type="checkbox" name="check">
-                                            <label for="check-a">Klima</label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-b" type="checkbox" name="check">
-                                            <label for="check-b">Yüzme Havuzu</label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-c" type="checkbox" name="check">
-                                            <label for="check-c">Merkezi Isıtma</label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-d" type="checkbox" name="check">
-                                            <label for="check-d">Çamaşır Odası</label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-e" type="checkbox" name="check">
-                                            <label for="check-e">Spor Salonu</label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-g" type="checkbox" name="check">
-                                            <label for="check-g">Alarm</label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-h" type="checkbox" name="check">
-                                            <label for="check-h">Pencere Kaplaması</label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-i" type="checkbox" name="check">
-                                            <label for="check-i">Buzdolabı</label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-j" type="checkbox" name="check">
-                                            <label for="check-j">TV Kablosu & WIFI</label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="fl-wrap filter-tags clearfix">
-                                    <div class="checkboxes float-left">
-                                        <div class="filter-tags-wrap">
-                                            <input id="check-k" type="checkbox" name="check">
-                                            <label for="check-k">Mikrodalga Fırın</label>
-                                        </div>
-                                    </div>
-                                </li>
+                            <ul class="pro-feature-add pl-0" id="ozelliklerListesi">
+
                             </ul>
                         </div>
                     </div>
@@ -400,7 +331,7 @@ https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.5.2/css/fileinput.min.css
                     success: function (response) {
                         // Başarılı cevap
                         console.log(response);
-                        alert(j response.message);
+                        alert(response.message);
                     },
                     error: function (error) {
                         // Hata durumu
@@ -427,5 +358,41 @@ https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.5.2/css/fileinput.min.css
                 showCaption: true,
                 allowedFileExtensions: ["jpg", "jpeg", "png", "gif"]
             });
+
+            ozellikleriGetir();
         });
+
+        function ozellikleriGetir()
+        {
+            $.ajax({
+                type: 'GET',
+                url: './php/ozellikler.php',
+                dataType: 'json',
+                success: function (response) {
+                    // Özellikleri listeye ekle
+                    response.forEach(function (ozellik) {
+                        var checkboxId = 'check-' + ozellik.toLowerCase();
+                        var labelFor = 'check-' + ozellik.toLowerCase();
+
+                        var listItem = $('<li class="fl-wrap filter-tags clearfix"></li>');
+                        var checkboxes = $('<div class="checkboxes float-left"></div>');
+                        var filterTagsWrap = $('<div class="filter-tags-wrap"></div>');
+                        var inputCheckbox = $('<input id="' + checkboxId + '" data-ozellik="' + ozellik + '" type="checkbox" name="check">');
+                        var label = $('<label for="' + labelFor + '">' + ozellik + '</label>');
+
+                        // HTML yapısını oluşturulan öğeleri birleştir
+                        filterTagsWrap.append(inputCheckbox);
+                        filterTagsWrap.append(label);
+                        checkboxes.append(filterTagsWrap);
+                        listItem.append(checkboxes);
+
+                        // Listeye ekle
+                        $('#ozelliklerListesi').append(listItem);
+                    });
+                },
+                error: function (error) {
+                    console.log('Error fetching data: ' + error.responseText);
+                }
+            });
+        }
     </script>

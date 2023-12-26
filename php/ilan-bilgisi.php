@@ -17,44 +17,27 @@ try {
                 WHERE ilanlar.deleted = 0 and id = $id
                 ORDER BY ilanlar.tarih DESC;
             ";
-
-        // Sorguyu hazırla
         $stmt = $conn->prepare($sql);
-
-        // Sorguyu çalıştır
         $stmt->execute();
-
-        // İlk kaydı getir
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        // Eğer bir kayıt varsa, bilgileri döndür
-        if ($row) {
-            echo json_encode(array('success' => true, 'data' => $row));
-        } else {
-            echo json_encode(array('success' => false, 'message' => 'Kayıt bulunamadı'));
-        }
-    }
-    else if (isset($_POST['ilan_resimleri']))
-    {
-        $id = $_POST['id'];
-        // SQL sorgusu oluştur
-        $sql = "SELECT * FROM ilan_resimleri 
-                WHERE ilan_resimleri.deleted = 0 and ilan_id = $id
-                ORDER BY ilan_resimleri.tarih DESC;
+        $sql2 = "SELECT * FROM ilan_ozellikleri
+            WHERE ilan_ozellikleri.deleted = 0 and ilan_id = $id;
             ";
+        $stmt2 = $conn->prepare($sql2);
+        $stmt2->execute();
+        $row2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 
-        // Sorguyu hazırla
-        $stmt = $conn->prepare($sql);
-
-        // Sorguyu çalıştır
-        $stmt->execute();
-
-        // İlk kaydı getir
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        $sql3 = "SELECT * FROM ilan_resimleri
+            WHERE ilan_resimleri.deleted = 0 and ilan_id = $id;
+            ";
+        $stmt3 = $conn->prepare($sql3);
+        $stmt3->execute();
+        $row3 = $stmt3->fetchAll(PDO::FETCH_ASSOC);
 
         // Eğer bir kayıt varsa, bilgileri döndür
         if ($row) {
-            echo json_encode(array('success' => true, 'data' => $row));
+            echo json_encode(array('success' => true, 'data' => $row,'ozellikler' => $row2, 'resimler' => $row3 ));
         } else {
             echo json_encode(array('success' => false, 'message' => 'Kayıt bulunamadı'));
         }

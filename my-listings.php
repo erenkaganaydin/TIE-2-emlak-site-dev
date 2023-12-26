@@ -32,6 +32,7 @@
         });
 
         function bilgileriGetir() {
+            $('#ilanlarr').html('');
             $.ajax({
                 type: 'POST',
                 url: './php/ilanlar.php',
@@ -49,8 +50,8 @@
                                     '<div class="starts text-left mb-0"><p>' + response.data[i].ilan_durumu + ' - ' + response.data[i].ilan_tipi + ' - ' + response.data[i].oda_sayisi + ' Oda</p></div></div></td>' +
                                     '<td>' + response.data[i].tarih + '</td>' +
                                     '<td>' + response.data[i].goruntulenme + '</td>' +
-                                    '<td class="actions"><a href="./edit-propery.php?id=' + response.data[i].ilan_id + '" class="edit"><i class="lni-pencil"></i>Edit</a>' +
-                                    '<a href="#"><i class="far fa-trash-alt"></i></a></td></tr>';
+                                    '<td class="actions"><a href="./edit-propery.php?id=' + response.data[i].ilan_id + '" class="edit"><i class="lni-pencil"></i>Düzenle</a>' +
+                                    '<a href="#" class="delete" data-ilan-id="' + response.data[i].ilan_id + '"><i class="far fa-trash-alt"></i></a></td></tr>';
 
                                 // Oluşturulan satırı tabloya ekleyin
                                 $('#ilanlarr').append(newRow);
@@ -69,4 +70,36 @@
                 }
             });
         }
+    </script>
+    <script>
+        // Silme butonuna tıklanınca
+        $('#ilanlarr').on('click', '.delete', function () {
+            var ilanId = $(this).data('ilan-id');
+
+            // Kullanıcıya onay mesajı göster
+            var confirmDelete = confirm('İlanı silmek istediğinizden emin misiniz?');
+
+            // Eğer kullanıcı "Evet" derse
+            if (confirmDelete) {
+                // AJAX isteği göndererek ilanı sil
+                $.ajax({
+                    type: 'POST',
+                    url: './php/sil-ilan.php', // Silme işlemini gerçekleştiren PHP dosyasının yolu
+                    data: { ilan_id: ilanId },
+                    dataType: 'json',
+                    success: function (response) {
+                        if (response.success) {
+                            // Silme başarılı ise tabloyu güncelle
+                            bilgileriGetir();
+                            alert('İlan başarıyla silindi.');
+                        } else {
+                            alert('İlan silinirken bir hata oluştu.');
+                        }
+                    },
+                    error: function (error) {
+                        console.log('Error deleting data: ' + error.responseText);
+                    }
+                });
+            }
+        });
     </script>

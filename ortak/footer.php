@@ -4,9 +4,15 @@
 <!-- END SECTION USER PROFILE -->
 
 <div class="second-footer ad mt-3">
-    <div class="container">
-        <p>2023 © Copyright - Tüm Hakları Saklıdır.</p>
-        <p>Sevgi ile <i aria-hidden="true" class="fa fa-heart"></i> Kodlandı</p>
+    <div class="">
+        <div class="col-12 row" style="margin: auto;">
+            <div class="col-3" style="max-width: 280px;width: 280px;"></div>
+            <div class="col-9 row">
+                <div class="col-9"> <p>2023 © Copyright - Tüm Hakları Saklıdır.</p></div>
+                <div class="col-3" style="text-align: right"><p>Sevgi ile <i aria-hidden="true" class="fa fa-heart"></i> Kodlandı</p></div>
+            </div>
+        </div>
+
     </div>
 </div>
 
@@ -70,3 +76,35 @@
 </body>
 
 </html>
+<script>
+    // Sayfa yüklendiğinde çalışacak kod
+    // navbarın active işaretlenmesi için
+    $(document).ready(function () {
+        // Mevcut sayfanın URL'ini al
+        var currentPageUrl = window.location.href;
+
+        // Menü öğelerini dön
+        $('#myDropdown li a').each(function () {
+            // Her menü öğesinin URL'sini al
+            var menuPageUrl = $(this).attr('href');
+
+            // Mevcut sayfanın URL'si ile menü öğesinin URL'si eşleşiyorsa
+            if (currentPageUrl.includes(menuPageUrl)) {
+                // Active class'ını ekle
+                $(this).addClass('active');
+            }
+        });
+
+        // Menü öğelerini dön
+        $('#userMiniNav li a').each(function () {
+            // Her menü öğesinin URL'sini al
+            var menuPageUrlMiniNav = $(this).attr('href');
+
+            // Mevcut sayfanın URL'si ile menü öğesinin URL'si eşleşiyorsa
+            if (currentPageUrl.includes(menuPageUrlMiniNav)) {
+                // Active class'ını ekle
+                $(this).addClass('active');
+            }
+        });
+    });
+</script>
