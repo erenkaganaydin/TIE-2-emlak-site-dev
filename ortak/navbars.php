@@ -15,7 +15,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="my-listings.html">
+                    <a href="my-listings.php">
                         <i aria-hidden="true" class="fa fa-list mr-3"></i>İlanlar
                     </a>
                 </li>
@@ -46,7 +46,7 @@
                 <div class="user-profile-box mb-0">
                     <div class="sidebar-header"><img alt="header-logo2.png" src="images/logo-blue.svg"></div>
                     <div class="header clearfix">
-                        <img alt="avatar" class="img-fluid profile-img" src="images/testimonials/ts-1.jpg">
+                        <img alt="avatar" class="img-fluid profile-img" src="images/1.png">
                     </div>
                     <div class="active-user">
                         <h2>Ad Soyad</h2>
@@ -64,7 +64,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="my-listings.html">
+                                <a href="my-listings.php">
                                     <i aria-hidden="true" class="fa fa-list"></i>İlanlarım
                                 </a>
                             </li>

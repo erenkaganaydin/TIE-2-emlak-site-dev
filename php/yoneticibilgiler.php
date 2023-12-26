@@ -1,9 +1,7 @@
 <?php
 // Veritabanı bağlantısı için bilgiler
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "emlak_sitesi";
+include_once "sunucu-bilgileri.php";
+
 
 try {
     // PDO nesnesi oluştur

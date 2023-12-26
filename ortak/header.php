@@ -7,7 +7,7 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <meta content="html 5 template" name="description">
     <meta content="" name="author">
-    <title>Find Houses - HTML5 Template</title>
+    <title>Yönetim Paneli</title>
     <!-- FAVICON -->
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" href="css/jquery-ui.css">
