@@ -31,7 +31,7 @@ include_once "header.php"
                             <p></p>
                         </div>
                         <div class="box bg-2">
-                            <a href="about.html" class="text-center button button--moema button--text-thick button--text-upper button--size-s">read More</a>
+                            <a href="contact-us.php" class="text-center button button--moema button--text-thick button--text-upper button--size-s">Daha Fazlası</a>
                             <img src="images/signature.png" class="ml-5" alt="">
                         </div>
                     </div>
