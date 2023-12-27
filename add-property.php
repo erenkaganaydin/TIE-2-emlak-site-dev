@@ -328,7 +328,7 @@ https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.5.2/css/fileinput.min.css
                 formData.append("ilan_durumu", $(".ilan_durum .current").text());
                 formData.append("ilan_tipi", $(".categories:eq(0) .current").text());
                 formData.append("oda_sayisi", $(".categories:eq(1) .current").text());
-                formData.append("price", $("#price").val().replace(/,/g, '').replace(/./g, ''));
+                formData.append("price", $("#price").val());
                 formData.append("area", $("#area").val());
                 formData.append("address", $("#address").val());
                 formData.append("city", $(".sehir .current").text());  //
@@ -363,6 +363,7 @@ https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.5.2/css/fileinput.min.css
                     data: formData,
                     contentType: false,
                     processData: false,
+                    dataType: 'json',
                     success: function (response) {
                         // Başarılı cevap
                         console.log(response);

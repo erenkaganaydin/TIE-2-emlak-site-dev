@@ -74,7 +74,7 @@ try {
     // Yeni resimleri yükleme işlemi (eski resimleri sil ve yeni resimleri ekle)
     if (!empty($_FILES['resimler']['name'][0])) {
         $uploadDirectory = '../uploads/'; // İlgili dizini belirtin
-        $baseUrl = 'http://localhost:1011/TIE-2-emlak-site-dev/uploads/'; // Change this to the actual base URL
+        $baseUrl =  $url.'uploads/'; // Change this to the actual base URL
 
         // Mevcut resimleri sil
         $deleteImagesSql = "DELETE FROM ilan_resimleri WHERE ilan_id = :ilan_id";

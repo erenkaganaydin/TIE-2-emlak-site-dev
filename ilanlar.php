@@ -166,7 +166,7 @@ if(isset($_POST['filtreler']))
                                         // veya
 
                                         // Noktalama kaldırarak
-                                        $formattedNumber = str_replace(',', '', number_format($number, 2));
+                                        $formattedNumber = str_replace('', '', number_format($number, 2));
 
                                         echo $formattedNumber;
                                     ?> ₺</div>

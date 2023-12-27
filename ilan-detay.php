@@ -202,7 +202,7 @@ $bilgiler = $stmtbilgiler->fetch(PDO::FETCH_ASSOC);
                                     <div class="widget-boxed-body">
                                         <div class="sidebar-widget author-widget2">
                                             <div class="author-box clearfix">
-                                                <img src="images/testimonials/ts-1.jpg" alt="author-image" class="author__img">
+                                                <img src="images/1.png" alt="author-image" class="author__img">
                                                 <h4 class="author__title"><?php echo $bilgiler['AdSoyad'];?></h4>
                                                 <p class="author__meta">İlan yetkilisi</p>
                                             </div>

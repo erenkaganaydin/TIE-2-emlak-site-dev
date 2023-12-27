@@ -133,7 +133,7 @@ catch (PDOException $e) {
                     $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     $sira = 1;
                     foreach ($row as $item) {?>
-                        <?php if ($sira == 1)
+                        <?php if ($sira++ == 1)
                         {?>
                             <div class="inner-box">
                                 <a href="ilan-detay.php?id=<?php echo $item['ilan_id']; ?>" class="recent-16" data-aos="fade-up" data-aos-delay="<?php echo (($sira*50)+100); ?>">
@@ -150,7 +150,7 @@ catch (PDOException $e) {
                                             // veya
 
                                             // Noktalama kaldırarak
-                                            $formattedNumber = str_replace(',', '', number_format($number, 2));
+                                            $formattedNumber = str_replace('', '', number_format($number, 2));
 
                                             echo $formattedNumber;
                                             ?> ₺</div>
@@ -261,60 +261,27 @@ catch (PDOException $e) {
                 <p>En çok ilana sahip şehirlerimiz.</p>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-lg-4 col-xl-4" data-aos="zoom-in" data-aos-delay="150">
+                <?php
+                $sql = "SELECT * FROM sehirler where deleted = 0";
+                $stmt = $conn->prepare($sql);
+                $stmt->execute();
+                $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $sira = 1;
+                foreach ($row as $item) {?>
+                <div class="col-sm-6 col-lg-4 col-xl-4" data-aos="zoom-in" data-aos-delay="<?php echo (($sira*50)+100)?>">
                     <!-- Image Box -->
-                    <a class="img-box hover-effect" href="properties-map.html">
-                        <img alt="" class="img-responsive" src="images/popular-places/12.jpg">
-                        <!-- Badge -->
+                    <a class="img-box hover-effect" href="#">
+                        <img alt="" class="img-responsive" src="<?php echo $url.$item['resim']; ?>">
+                        <!-- Badge
                         <div class="listing-badges">
                             <span class="featured">Yeni</span>
-                        </div>
+                        </div> -->
                         <div class="img-box-content visible">
-                            <h4>Antalya </h4>
-                            <span>2 İlan</span>
+                            <h4><?php echo $item['adi']; ?></h4>
                         </div>
                     </a>
                 </div>
-                <div class="col-sm-6 col-lg-4 col-xl-4" data-aos="zoom-in" data-aos-delay="250">
-                    <!-- Image Box -->
-                    <a class="img-box hover-effect" href="properties-map.html">
-                        <img alt="" class="img-responsive" src="images/popular-places/13.jpg">
-                        <div class="img-box-content visible">
-                            <h4>İstanbul</h4>
-                            <span>15 İlan</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-4" data-aos="zoom-in" data-aos-delay="350">
-                    <!-- Image Box -->
-                    <a class="img-box hover-effect" href="properties-map.html">
-                        <img alt="" class="img-responsive" src="images/popular-places/14.jpg">
-                        <div class="img-box-content visible">
-                            <h4>Anakra</h4>
-                            <span>12 İlan</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-4" data-aos="zoom-in" data-aos-delay="150">
-                    <!-- Image Box -->
-                    <a class="img-box hover-effect" href="properties-map.html">
-                        <img alt="" class="img-responsive" src="images/popular-places/15.jpg">
-                        <div class="img-box-content visible">
-                            <h4>Antalya </h4>
-                            <span>10 İlan</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-4" data-aos="zoom-in" data-aos-delay="250">
-                    <!-- Image Box -->
-                    <a class="img-box hover-effect no-mb" href="properties-map.html">
-                        <img alt="" class="img-responsive" src="images/popular-places/10.jpg">
-                        <div class="img-box-content visible">
-                            <h4>İzmir</h4>
-                            <span>7 İlan</span>
-                        </div>
-                    </a>
-                </div>
+                <?php } ?>
                 <div class="col-sm-6 col-lg-4 col-xl-4" data-aos="zoom-in" data-aos-delay="350">
                     <!-- Image Box -->
                     <a class="img-box hover-effect no-mb x3" href="properties-map.html">
@@ -322,7 +289,6 @@ catch (PDOException $e) {
                         <!-- Badge -->
                         <div class="img-box-content visible">
                             <h4>Diğer </h4>
-                            <span>3 İlan</span>
                         </div>
                     </a>
                 </div>

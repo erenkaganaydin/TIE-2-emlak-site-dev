@@ -51,7 +51,7 @@ try {
 
         if (!empty($_FILES['resimler']['name'][0])) {
             $uploadDirectory = '../uploads/'; // İlgili dizini belirtin
-            $baseUrl = 'http://localhost:1011/TIE-2-emlak-site-dev/uploads/'; // Change this to the actual base URL
+            $baseUrl = $url.'uploads/'; // Change this to the actual base URL
 
             foreach ($_FILES['resimler']['tmp_name'] as $key => $tmp_name) {
                 $originalFileName = $_FILES['resimler']['name'][$key];
