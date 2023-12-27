@@ -1,9 +1,3 @@
-/*
-Author       : Code-Theme
-Template Name: Find Houses - HTML5 Template
-Version      : 1.0
-*/
-
 "use strict";
 
 jQuery(document).on('ready', function ($) {
