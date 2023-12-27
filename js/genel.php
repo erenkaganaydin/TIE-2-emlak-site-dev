@@ -1,6 +1,5 @@
 <!-- ARCHIVES JS -->
 <script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/rangeSlider.js"></script>
 <script src="js/tether.min.js"></script>
 <script src="js/moment.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -11,9 +10,7 @@
 <script src="js/nice-select.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/slick.js"></script>
-<script src="js/fitvids.js"></script>
 <script src="js/jquery.waypoints.min.js"></script>
-<script src="js/typed.min.js"></script>
 <script src="js/jquery.counterup.min.js"></script>
 <script src="js/imagesloaded.pkgd.min.js"></script>
 <script src="js/isotope.pkgd.min.js"></script>
