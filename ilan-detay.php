@@ -14,7 +14,7 @@
         // Hata durumunda hatayı döndür
         echo json_encode(array('success' => false, 'message' => 'Hata: ' . $e->getMessage()));
     }
-
+    $id = 0;
     if (isset($_GET['id']))
     {
         $id = $_GET['id'];
@@ -298,6 +298,7 @@ $bilgiler = $stmtbilgiler->fetch(PDO::FETCH_ASSOC);
                         <h5>Dikkat Çeken İlanlar</h5>
                         <div class="row portfolio-items">
                             <?php
+
                             $sql = "SELECT * FROM ilanlar
                         INNER JOIN (
                             SELECT ilan_id, MIN(id) AS min_resim_id
@@ -305,7 +306,7 @@ $bilgiler = $stmtbilgiler->fetch(PDO::FETCH_ASSOC);
                             GROUP BY ilan_id
                         ) AS T ON ilanlar.id = T.ilan_id
                         INNER JOIN ilan_resimleri ON ilan_resimleri.id = T.min_resim_id
-                        WHERE ilanlar.deleted = 0 
+                        WHERE ilanlar.deleted = 0 and ilanlar.id <> $id
                         ORDER BY rand() LIMIT 3;
                         ";
                             $stmt = $conn->prepare($sql);
@@ -315,7 +316,7 @@ $bilgiler = $stmtbilgiler->fetch(PDO::FETCH_ASSOC);
                                 <div class="item col-lg-4 col-md-6 col-xs-12 landscapes sale">
                                     <div class="project-single mb-0" data-aos="fade-up">
                                         <a href="ilan-detay.php" class="recent-16">
-                                            <div class="recent-img16 img-center" style="background-image: url(images/interior/p-1.jpg);"></div>
+                                            <div class="recent-img16 img-center" style="background-image: url(<?php echo $item['resim_path']; ?>);"></div>
                                             <div class="recent-content"></div>
                                             <div class="recent-details">
                                                 <div class="recent-title"><?php echo $item['baslik']; ?></div>
