@@ -382,3 +382,35 @@ $bilgiler = $stmtbilgiler->fetch(PDO::FETCH_ASSOC);
         xhr.send(formData); // FormData nesnesini isteğe ekle
     });
 </script>
+<?php
+try {
+    // Veritabanı bağlantısı
+    $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+
+    // Hata modunu ayarla
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // İlgili ilanın ID'si
+    $ilan_id = 1; // İlan ID'sini kendinize göre güncelleyin
+
+    // SQL sorgusu
+    $sql = "UPDATE ilanlar SET goruntulenme = goruntulenme + 1 WHERE id = :ilan_id";
+
+    // Sorguyu hazırla
+    $stmt = $pdo->prepare($sql);
+
+    // Parametreleri bind et
+    $stmt->bindParam(':ilan_id', $id, PDO::PARAM_INT);
+
+    // Sorguyu çalıştır
+    $stmt->execute();
+
+    echo "Görüntülenme sayısı başarıyla arttırıldı.";
+} catch (PDOException $e) {
+    echo "Hata: " . $e->getMessage();
+}
+
+// PDO bağlantısını kapat
+$pdo = null;
+
+?>
