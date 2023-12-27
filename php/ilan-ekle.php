@@ -48,31 +48,27 @@ try {
     // Resim yükleme işlemi
     if (!empty($_FILES['resimler']['name'][0])) {
         $uploadDirectory = '../uploads/'; // İlgili dizini belirtin
+        $baseUrl = $url.'uploads/'; // Change this to the actual base URL
 
-        if (!empty($_FILES['resimler']['name'][0])) {
-            $uploadDirectory = '../uploads/'; // İlgili dizini belirtin
-            $baseUrl = $url.'uploads/'; // Change this to the actual base URL
+        foreach ($_FILES['resimler']['tmp_name'] as $key => $tmp_name) {
+            $originalFileName = $_FILES['resimler']['name'][$key];
+            $fileExtension = pathinfo($originalFileName, PATHINFO_EXTENSION);
 
-            foreach ($_FILES['resimler']['tmp_name'] as $key => $tmp_name) {
-                $originalFileName = $_FILES['resimler']['name'][$key];
-                $fileExtension = pathinfo($originalFileName, PATHINFO_EXTENSION);
+            // Generate a random file name with extension
+            $randomString = bin2hex(random_bytes(8)); // 8 bytes will result in a 16-character hex string
+            $newFileName = $randomString . '.' . $fileExtension;
 
-                // Generate a random file name with extension
-                $randomString = bin2hex(random_bytes(8)); // 8 bytes will result in a 16-character hex string
-                $newFileName = $randomString . '.' . $fileExtension;
+            $filePath = $uploadDirectory . $newFileName;
+            $fileUrl = $baseUrl . $newFileName;
 
-                $filePath = $uploadDirectory . $newFileName;
-                $fileUrl = $baseUrl . $newFileName;
+            move_uploaded_file($tmp_name, $filePath);
 
-                move_uploaded_file($tmp_name, $filePath);
-
-                // İlgili resmi veritabanına ekleyin (örneğin, ilan_resimleri tablosuna)
-                $resimSql = "INSERT INTO ilan_resimleri (ilan_id, resim_path) VALUES (:ilan_id, :resim_path)";
-                $resimStmt = $conn->prepare($resimSql);
-                $resimStmt->bindParam(':ilan_id', $last_id);
-                $resimStmt->bindParam(':resim_path', $fileUrl); // Store the URL instead of the file path
-                $resimStmt->execute();
-            }
+            // İlgili resmi veritabanına ekleyin (örneğin, ilan_resimleri tablosuna)
+            $resimSql = "INSERT INTO ilan_resimleri (ilan_id, resim_path) VALUES (:ilan_id, :resim_path)";
+            $resimStmt = $conn->prepare($resimSql);
+            $resimStmt->bindParam(':ilan_id', $last_id);
+            $resimStmt->bindParam(':resim_path', $fileUrl); // Store the URL instead of the file path
+            $resimStmt->execute();
         }
     }
 

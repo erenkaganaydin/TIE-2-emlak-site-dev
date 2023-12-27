@@ -15,19 +15,19 @@ include "ortak/header.php"; ?>
                                 <div class="row">
                                     <div class="col-lg-12 ">
                                         <div class="form-group name">
-                                            <label>Current Password</label>
+                                            <label>Eski Şifre</label>
                                             <input type="password" name="current-password" class="form-control" placeholder="Eski Sifre">
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-group email">
-                                            <label>New Password</label>
+                                            <label>Yeni Sifre</label>
                                             <input type="password" name="new-password" class="form-control" placeholder="Yeni Sifre">
                                         </div>
                                     </div>
                                     <div class="col-lg-12 ">
                                         <div class="form-group subject">
-                                            <label>Confirm New Password</label>
+                                            <label>Yeni Sifre Tekrar</label>
                                             <input type="password" name="confirm-new-password" class="form-control" placeholder="Yeni Sifre Tekrar">
                                         </div>
                                     </div>
