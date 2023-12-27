@@ -207,45 +207,45 @@ catch (PDOException $e) {
     <!-- END SECTION INFO-HELP -->
 
     <!-- START SECTION INFO -->
-    <section _ngcontent-bgi-c3="" class="featured-boxes-area">
-        <div _ngcontent-bgi-c3="" class="container">
-            <div _ngcontent-bgi-c3="" class="featured-boxes-inner">
-                <div _ngcontent-bgi-c3="" class="row m-0">
-                    <div _ngcontent-bgi-c3="" class="col-lg-3 col-sm-6 col-md-6 p-0" data-aos="fade-up"
+    <section class="featured-boxes-area">
+        <div class="container">
+            <div class="featured-boxes-inner">
+                <div class="row m-0">
+                    <div class="col-lg-3 col-sm-6 col-md-6 p-0" data-aos="fade-up"
                          data-aos-delay="250">
-                        <div _ngcontent-bgi-c3="" class="single-featured-box">
-                            <div _ngcontent-bgi-c3="" class="icon color-fb7756"><img alt=""
+                        <div class="single-featured-box">
+                            <div class="icon color-fb7756"><img alt=""
                                                                                      height="85" src="images/icons/i-5.svg" width="85">
                             </div>
-                            <h3 _ngcontent-bgi-c3="" class="mt-5">Anahtar Teslim</h3>
-                            <p _ngcontent-bgi-c3="">Siz hayallerinizdeki yeri buluduğunuzda, sizin için gerekli tüm işlemleri tamamlaıyoruz. Size sadece hayalinizin keyfini sürmek kalıyor.</p></div>
+                            <h3 class="mt-5">Anahtar Teslim</h3>
+                            <p>Siz hayallerinizdeki yeri buluduğunuzda, sizin için gerekli tüm işlemleri tamamlaıyoruz. Size sadece hayalinizin keyfini sürmek kalıyor.</p></div>
                     </div>
-                    <div _ngcontent-bgi-c3="" class="col-lg-3 col-sm-6 col-md-6 p-0" data-aos="fade-up"
+                    <div class="col-lg-3 col-sm-6 col-md-6 p-0" data-aos="fade-up"
                          data-aos-delay="350">
-                        <div _ngcontent-bgi-c3="" class="single-featured-box">
-                            <div _ngcontent-bgi-c3="" class="icon color-facd60"><img alt=""
+                        <div class="single-featured-box">
+                            <div class="icon color-facd60"><img alt=""
                                                                                      height="85" src="images/icons/i-6.svg" width="85">
                             </div>
-                            <h3 _ngcontent-bgi-c3="" class="mt-5">Güven Faktörü</h3>
-                            <p _ngcontent-bgi-c3="">Sahip olduğumuz tecrübe ile yaşayabileceğiniz tüm sorunları ön görüyor ve gerekli önemleri alıyoruz.Size, hiç bir şeyi düşünmeden sadece hayallerinizi yaşamak kalıyor..</p></div>
+                            <h3 class="mt-5">Güven Faktörü</h3>
+                            <p>Sahip olduğumuz tecrübe ile yaşayabileceğiniz tüm sorunları ön görüyor ve gerekli önemleri alıyoruz.Size, hiç bir şeyi düşünmeden sadece hayallerinizi yaşamak kalıyor..</p></div>
                     </div>
-                    <div _ngcontent-bgi-c3="" class="col-lg-3 col-sm-6 col-md-6 p-0" data-aos="fade-up"
+                    <div class="col-lg-3 col-sm-6 col-md-6 p-0" data-aos="fade-up"
                          data-aos-delay="450">
-                        <div _ngcontent-bgi-c3="" class="single-featured-box">
-                            <div _ngcontent-bgi-c3="" class="icon color-1ac0c6"><img alt=""
+                        <div class="single-featured-box">
+                            <div class="icon color-1ac0c6"><img alt=""
                                                                                      height="85" src="images/icons/i-7.svg" width="85">
                             </div>
-                            <h3 _ngcontent-bgi-c3="" class="mt-5">Ödeme Desteği</h3>
-                            <p _ngcontent-bgi-c3="">Satın alma işlemlerinde, taksit imkanı sunarak, daha küçük ödemeler ile daha büyük mülklere sahip olmanızı sağlıyoruz.</p>
+                            <h3 class="mt-5">Ödeme Desteği</h3>
+                            <p>Satın alma işlemlerinde, taksit imkanı sunarak, daha küçük ödemeler ile daha büyük mülklere sahip olmanızı sağlıyoruz.</p>
                         </div>
                     </div>
-                    <div _ngcontent-bgi-c3="" class="col-lg-3 col-sm-6 col-md-6 p-0" data-aos="fade-up"
+                    <div class="col-lg-3 col-sm-6 col-md-6 p-0" data-aos="fade-up"
                          data-aos-delay="550">
-                        <div _ngcontent-bgi-c3="" class="single-featured-box">
-                            <div _ngcontent-bgi-c3="" class="icon"><img alt="" height="85"
+                        <div class="single-featured-box">
+                            <div class="icon"><img alt="" height="85"
                                                                         src="images/icons/i-8.svg" width="85"></div>
-                            <h3 _ngcontent-bgi-c3="" class="mt-5">7/24 Destek</h3>
-                            <p _ngcontent-bgi-c3="">Dilediğiniz zaman, sesli ve yazılı kanallardan bize ulaşabiliyor ve tüm sorunlarınızda kesintisiz destek alabiliyorsunuz.</p></div>
+                            <h3 class="mt-5">7/24 Destek</h3>
+                            <p>Dilediğiniz zaman, sesli ve yazılı kanallardan bize ulaşabiliyor ve tüm sorunlarınızda kesintisiz destek alabiliyorsunuz.</p></div>
                     </div>
                 </div>
             </div>
@@ -270,7 +270,7 @@ catch (PDOException $e) {
                 foreach ($row as $item) {?>
                 <div class="col-sm-6 col-lg-4 col-xl-4" data-aos="zoom-in" data-aos-delay="<?php echo (($sira*50)+100)?>">
                     <!-- Image Box -->
-                    <a class="img-box hover-effect" href="#">
+                    <a class="img-box hover-effect" href="ilanlar.php">
                         <img alt="" class="img-responsive" src="<?php echo $url.$item['resim']; ?>">
                         <!-- Badge
                         <div class="listing-badges">
@@ -284,7 +284,7 @@ catch (PDOException $e) {
                 <?php } ?>
                 <div class="col-sm-6 col-lg-4 col-xl-4" data-aos="zoom-in" data-aos-delay="350">
                     <!-- Image Box -->
-                    <a class="img-box hover-effect no-mb x3" href="properties-map.html">
+                    <a class="img-box hover-effect no-mb x3" href="ilanlar.php">
                         <img alt="" class="img-responsive" src="images/popular-places/5.jpg">
                         <!-- Badge -->
                         <div class="img-box-content visible">

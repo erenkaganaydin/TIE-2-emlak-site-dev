@@ -384,12 +384,6 @@ $bilgiler = $stmtbilgiler->fetch(PDO::FETCH_ASSOC);
 </script>
 <?php
 try {
-    // Veritabanı bağlantısı
-    $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-
-    // Hata modunu ayarla
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
     // İlgili ilanın ID'si
     $ilan_id = 1; // İlan ID'sini kendinize göre güncelleyin
 
@@ -397,7 +391,7 @@ try {
     $sql = "UPDATE ilanlar SET goruntulenme = goruntulenme + 1 WHERE id = :ilan_id";
 
     // Sorguyu hazırla
-    $stmt = $pdo->prepare($sql);
+    $stmt = $conn->prepare($sql);
 
     // Parametreleri bind et
     $stmt->bindParam(':ilan_id', $id, PDO::PARAM_INT);

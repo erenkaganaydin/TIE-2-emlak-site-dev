@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="netabout">
-                        <a class="logo" href="index.html">
+                        <a class="logo" href="index.php">
                             <img alt="netcom" src="images/logo-black.svg?id=1">
                         </a>
                         <p>Başladığımız ilk günden bugüne, kaliteli, anlaşılır ve çözüm odaklı hizmet verme hedefimiz ile binlerce kişiyi doğru alım ve satım işlemi ile bir araya getirdik.</p>
