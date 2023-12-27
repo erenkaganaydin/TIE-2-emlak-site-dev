@@ -60,7 +60,7 @@
                         <img alt="avatar" class="img-fluid profile-img" src="images/1.png">
                     </div>
                     <div class="active-user">
-                        <h2 id="navbarAdSoyad">Ad Soyad</h2>
+                        <h2 id="navbarAdSoyad"><?php echo $_SESSION['user_data']['AdSoyad'] ?></h2>
                     </div>
                     <div class="detail clearfix">
                         <ul class="mb-0" id="userMiniNav">

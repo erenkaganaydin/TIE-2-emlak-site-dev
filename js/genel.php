@@ -25,7 +25,6 @@
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/searched.js"></script>
 <script src="js/forms-2.js"></script>
-<script src="js/range.js"></script>
 <script src="js/color-switcher.js"></script>
 <script>
     $(window).on('scroll load', function () {
