@@ -405,7 +405,6 @@ try {
     // Sorguyu çalıştır
     $stmt->execute();
 
-    echo "Görüntülenme sayısı başarıyla arttırıldı.";
 } catch (PDOException $e) {
     echo "Hata: " . $e->getMessage();
 }
