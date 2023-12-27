@@ -1,5 +1,19 @@
 ﻿<?php
     include_once "header.php";
+    include_once "php/sunucu-bilgileri.php";
+try {
+    // PDO nesnesi oluştur
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+
+    // Hata modunu ayarla
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn->exec("SET NAMES utf8");
+}
+catch (PDOException $e) {
+    // Hata durumunda hatayı döndür
+    echo json_encode(array('success' => false, 'message' => 'Hata: ' . $e->getMessage()));
+}
+
 ?>
 <body class="homepage-5 the-search hd-white">
 <!-- Wrapper -->
@@ -23,68 +37,63 @@
                             <div class="banner-search-wrap">
                                 <ul class="nav nav-tabs rld-banner-tab">
                                     <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="tab" href="#tabs_1">Satılık</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#tabs_2">Kiralık</a>
+                                        <a class="nav-link active" data-toggle="tab" href="#tabs_1">Hayallerini Ara</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content">
                                     <div class="tab-pane fade show active" id="tabs_1">
                                         <div class="rld-main-search">
                                             <div class="row" style="justify-content: space-around">
-                                                <div class="rld-single-input">
-                                                    <input placeholder="Anahtar Kelime..." type="text">
-                                                </div>
-                                                <div class="rld-single-select ml-22">
-                                                    <select class="select single-select">
-                                                        <option value="1">Özellik Türü</option>
-                                                        <option value="2">Aile Evi</option>
-                                                        <option value="3">Apartman</option>
-                                                        <option value="4">Villa</option>
-                                                    </select>
-                                                </div>
-                                                <div class="rld-single-select">
-                                                    <select class="select single-select mr-0">
-                                                        <option value="1">Sehir</option>
-                                                        <option value="2">İstanbul</option>
-                                                        <option value="3">İzmir</option>
-                                                        <option value="3">Ankara</option>
-                                                        <option value="3">Antalya</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-xl-2 col-lg-2 col-md-4 pl-0">
-                                                    <a class="btn btn-yellow" href="#">Ara</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="tabs_2">
-                                        <div class="rld-main-search">
-                                            <div class="row" style="justify-content: space-around">
-                                                <div class="rld-single-input">
-                                                    <input placeholder="Anahtar Kelime..." type="text">
-                                                </div>
-                                                <div class="rld-single-select ml-22">
-                                                    <select class="select single-select">
-                                                        <option value="1">Özellik Türü</option>
-                                                        <option value="2">Aile Evi</option>
-                                                        <option value="3">Apartman</option>
-                                                        <option value="4">Villa</option>
-                                                    </select>
-                                                </div>
-                                                <div class="rld-single-select">
-                                                    <select class="select single-select mr-0">
-                                                        <option value="1">Sehir</option>
-                                                        <option value="2">İstanbul</option>
-                                                        <option value="3">İzmir</option>
-                                                        <option value="3">Ankara</option>
-                                                        <option value="3">Antalya</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-xl-2 col-lg-2 col-md-4 pl-0">
-                                                    <a class="btn btn-yellow" href="#">Ara</a>
-                                                </div>
+                                                <form action="ilanlar.php" method="post" style="display: contents;">
+                                                    <input type="hidden" name="filtreler">
+                                                    <div class="rld-single-input">
+                                                        <input placeholder="Anahtar Kelime..." type="text" name="anahtar_kelime">
+                                                    </div>
+                                                    <div class="rld-single-select ml-22">
+                                                        <select class="select single-select" name="ilan_durumu">
+                                                            <option value="0">İlan Durumu</option>
+                                                            <option value="Satılık">Satılık</option>
+                                                            <option value="Kiralık">Kiralık</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="rld-single-select ml-22">
+                                                        <select class="select single-select" name="ilan_tip">
+                                                            <option value="0">İlan Tipi</option>
+                                                            <?php
+                                                            $sql = "
+                                                        SELECT * FROM ilan_tipleri where deleted = 0
+                                                            ";
+                                                            $stmt = $conn->prepare($sql);
+                                                            $stmt->execute();
+                                                            $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                                            foreach ($row as $item) {?>
+                                                                <option <?php if (isset($_POST['ilan_tip'])){ if ($_POST['ilan_tip'] == $item['adi']) echo "selected";} ?> value="<?php echo $item['adi']; ?>"><?php echo $item['adi']; ?></option>
+                                                                <?php
+                                                            }
+                                                            ?>
+                                                        </select>
+                                                    </div>
+                                                    <div class="rld-single-select">
+                                                        <select class="select single-select mr-0" name="sehir">
+                                                            <option value="0">Sehir</option>
+                                                            <?php
+                                                            $sql = "SELECT * FROM sehirler where deleted = 0";
+                                                            $stmt = $conn->prepare($sql);
+                                                            $stmt->execute();
+                                                            $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                                                            foreach ($row as $item) {?>
+                                                                <option <?php if (isset($_POST['sehir'])){ if ($_POST['sehir'] == $item['adi']) echo "selected";} ?> value="<?php echo $item['adi']; ?>"><?php echo $item['adi']; ?></option>
+                                                                <?php
+                                                            }
+                                                            ?>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-xl-2 col-lg-2 col-md-4 pl-0">
+                                                        <button type="submit" class="btn btn-yellow" >Ara</button>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -108,41 +117,74 @@
             </div>
             <div class="portfolio right-slider">
                 <div class="owl-carousel home5-right-slider">
-                    <div class="inner-box">
-                        <a class="recent-16" data-aos="fade-up" data-aos-delay="150" href="ilan-detay.php">
-                            <div class="recent-img16 img-fluid img-center"
-                                 style="background-image: url(images/interior/p-1.jpg);"></div>
-                            <div class="recent-content"></div>
-                            <div class="recent-details">
-                                <div class="recent-title">Lüx Villa</div>
-                                <div class="recent-price">1.230.000 ₺</div>
-                                <div class="house-details">6 Yatak Odası <span>|</span> 3 Banyo <span>|</span> 720 m2</div>
+                    <?php
+                    $sql = "SELECT * FROM ilanlar
+                        INNER JOIN (
+                            SELECT ilan_id, MIN(id) AS min_resim_id
+                            FROM ilan_resimleri
+                            GROUP BY ilan_id
+                        ) AS T ON ilanlar.id = T.ilan_id
+                        INNER JOIN ilan_resimleri ON ilan_resimleri.id = T.min_resim_id
+                        WHERE ilanlar.deleted = 0
+                        ORDER BY ilanlar.tarih DESC LIMIT 5;
+                        ";
+                    $stmt = $conn->prepare($sql);
+                    $stmt->execute();
+                    $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                    $sira = 1;
+                    foreach ($row as $item) {?>
+                        <?php if ($sira == 1)
+                        {?>
+                            <div class="inner-box">
+                                <a href="ilan-detay.php?id=<?php echo $item['ilan_id']; ?>" class="recent-16" data-aos="fade-up" data-aos-delay="<?php echo (($sira*50)+100); ?>">
+                                    <div class="recent-img16 img-fluid img-center" style="background-image: url(<?php echo $item['resim_path']; ?>);"></div>
+                                    <div class="recent-content"></div>
+                                    <div class="recent-details">
+                                        <div class="recent-title"><?php echo $item['baslik']; ?></div>
+                                        <div class="recent-price"><?php
+                                            $number = $item['price'];
+
+                                            // Noktalama ekleyerek
+                                            $formattedNumber = number_format($number, 2, ',', '.');
+
+                                            // veya
+
+                                            // Noktalama kaldırarak
+                                            $formattedNumber = str_replace(',', '', number_format($number, 2));
+
+                                            echo $formattedNumber;
+                                            ?> ₺</div>
+                                        <div class="house-details"><?php echo $item['oda_sayisi']; ?> Oda <span>|</span> <?php echo $item['banyo_sayisi']; ?> Banyo <span>|</span> <?php echo $item['area']; ?> m2</div>
+                                    </div>
+                                    <div class="view-proper">İncele</div>
+                                </a>
                             </div>
-                            <div class="view-proper">İncele</div>
-                        </a>
-                    </div>
-                    <a class="recent-16" data-aos="fade-up" data-aos-delay="250" href="ilan-detay.php">
-                        <div class="recent-img16 img-center"
-                             style="background-image: url(images/interior/p-2.jpg);"></div>
-                        <div class="recent-content"></div>
-                        <div class="recent-details">
-                            <div class="recent-title">Aile Apartmanı</div>
-                            <div class="recent-price">10.000 ₺</div>
-                            <div class="house-details">3 Oda <span>|</span> 2 Kapalı Balkon <span>|</span> 130 m2</div>
-                        </div>
-                        <div class="view-proper">İncele</div>
-                    </a>
-                    <a class="recent-16" data-aos="fade-up" data-aos-delay="350" href="ilan-detay.php">
-                        <div class="recent-img16 img-center"
-                             style="background-image: url(images/interior/p-3.jpg);"></div>
-                        <div class="recent-content"></div>
-                        <div class="recent-details">
-                            <div class="recent-title">Hobi Evi</div>
-                            <div class="recent-price">430.000₺</div>
-                            <div class="house-details">2 Oda <span>|</span> 240 m2 bahçe <span>|</span> 560 m2 </div>
-                        </div>
-                        <div class="view-proper">İncele</div>
-                    </a>
+                        <?php } else{?>
+                            <a href="ilan-detay.php?id=<?php echo $item['ilan_id']; ?>" class="recent-16" data-aos="fade-up" data-aos-delay="<?php echo (($sira*50)+100); ?>">
+                                <div class="recent-img16 img-fluid img-center" style="background-image: url(<?php echo $item['resim_path']; ?>);"></div>
+                                <div class="recent-content"></div>
+                                <div class="recent-details">
+                                    <div class="recent-title"><?php echo $item['baslik']; ?></div>
+                                    <div class="recent-price"><?php
+                                        $number = $item['price'];
+
+                                        // Noktalama ekleyerek
+                                        $formattedNumber = number_format($number, 2, ',', '.');
+
+                                        // veya
+
+                                        // Noktalama kaldırarak
+                                        $formattedNumber = str_replace(',', '', number_format($number, 2));
+
+                                        echo $formattedNumber;
+                                        ?> ₺</div>
+                                    <div class="house-details"><?php echo $item['oda_sayisi']; ?> Oda <span>|</span> <?php echo $item['banyo_sayisi']; ?> Banyo <span>|</span> <?php echo $item['area']; ?> m2</div>
+                                </div>
+                                <div class="view-proper">İncele</div>
+                            </a>
+
+                        <?php } ?>
+                    <?php } ?>
                 </div>
             </div>
         </div>

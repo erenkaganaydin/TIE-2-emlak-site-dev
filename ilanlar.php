@@ -28,6 +28,11 @@ if(isset($_POST['filtreler']))
         if (strlen($_POST['sehir'])>1)
             $ekSorgular = $ekSorgular. " and ilanlar.city = '".$_POST['sehir']."' ";
     }
+    if (isset($_POST['ilan_durumu']))
+    {
+        if (strlen($_POST['ilan_durumu'])>1)
+            $ekSorgular = $ekSorgular. " and ilanlar.ilan_durumu = '".$_POST['ilan_durumu']."' ";
+    }
 }
 ?>
 
@@ -63,6 +68,13 @@ if(isset($_POST['filtreler']))
                                             <input type="hidden" name="filtreler">
                                             <div class="rld-single-input">
                                                 <input type="text" value="<?php if (isset($_POST['anahtar_kelime'])){ echo $_POST['anahtar_kelime'];} ?>" name="anahtar_kelime" placeholder="Anahtar Kelime...">
+                                            </div>
+                                            <div class="rld-single-select ml-22">
+                                                <select class="select single-select" name="ilan_durumu">
+                                                    <option value="0">İlan Durumu</option>
+                                                    <option value="Satılık" <?php if (isset($_POST['ilan_durumu'])){ if ($_POST['ilan_durumu'] == "Satılık") echo "selected";} ?>>Satılık</option>
+                                                    <option value="Kiralık" <?php if (isset($_POST['ilan_durumu'])){ if ($_POST['ilan_durumu'] == "Kiralık") echo "selected";} ?>>Kiralık</option>
+                                                </select>
                                             </div>
                                             <div class="rld-single-select ml-22">
                                                 <select class="select single-select" name="ilan_tip">
@@ -108,21 +120,8 @@ if(isset($_POST['filtreler']))
                         </div>
                     </div>
                 </div>
-                <!--/ End Search Form -->
-                <section class="headings-2 pt-0">
-                    <div class="pro-wrapper">
-                        <div class="detail-wrapper-body">
-                            <div class="listing-title-bar">
-                                <div class="text-heading text-left">
-                                    <p class="font-weight-bold mb-0 mt-3">9 Search results</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div class="row portfolio-items">
-                    <?php
-                    $sql = "SELECT * FROM ilanlar
+                <?php
+                $sql = "SELECT * FROM ilanlar
                         INNER JOIN (
                             SELECT ilan_id, MIN(id) AS min_resim_id
                             FROM ilan_resimleri
@@ -132,14 +131,29 @@ if(isset($_POST['filtreler']))
                         WHERE ilanlar.deleted = 0 $ekSorgular
                         ORDER BY ilanlar.tarih DESC;
                         ";
-                    $stmt = $pdo->prepare($sql);
-                    $stmt->execute();
-                    $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute();
+                $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                ?>
+                <!--/ End Search Form -->
+                <section class="headings-2 pt-0">
+                    <div class="pro-wrapper">
+                        <div class="detail-wrapper-body">
+                            <div class="listing-title-bar">
+                                <div class="text-heading text-left">
+                                    <p class="font-weight-bold mb-0 mt-3"><?php echo count($row); ?> Sonuç Bulundu</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="row portfolio-items">
+                    <?php
                     foreach ($row as $item) {?>
                     <div class="item col-lg-4 col-md-6 col-xs-12 landscapes sale">
                         <div class="project-single mb-0" data-aos="fade-up">
                             <a href="ilan-detay.php?id=<?php echo $item['ilan_id']; ?>" class="recent-16">
-                                <div class="recent-img16 img-center" style="background-image: url(images/interior/p-1.jpg);"></div>
+                                <div class="recent-img16 img-center" style="background-image: url(<?php echo $item['resim_path']; ?>);"></div>
                                 <div class="recent-content"></div>
                                 <div class="recent-details">
                                     <div class="recent-title"><?php echo $item['baslik']; ?></div>
@@ -158,7 +172,7 @@ if(isset($_POST['filtreler']))
                                     ?> ₺</div>
                                     <div class="house-details"><?php echo $item['oda_sayisi']; ?> Oda <span>|</span> <?php echo $item['banyo_sayisi']; ?> Banyo <span>|</span> <?php echo $item['area']; ?> m2</div>
                                 </div>
-                                <div class="view-proper">View Details</div>
+                                <div class="view-proper">İncele</div>
                             </a>
                         </div>
                     </div>

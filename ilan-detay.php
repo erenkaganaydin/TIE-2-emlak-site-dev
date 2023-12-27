@@ -50,6 +50,10 @@
             exit();
         }
     }
+    else{
+        header('Location: index.php');
+        exit();
+    }
 
 $sqlbililer = "SELECT * FROM yoneticibilgileri where Deleted = 0";
 $stmtbilgiler = $conn->prepare($sqlbililer);
