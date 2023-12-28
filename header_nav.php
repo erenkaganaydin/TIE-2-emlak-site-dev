@@ -24,8 +24,8 @@
                     <ul id="responsive">
                         <li><a href="index.php">Anasayfa</a></li>
                         <li><a href="./ilanlar.php">Tüm İlanlar</a></li>
-                        <li><a href="about.php">Hakkimizda</a></li>
-                        <li><a href="contact-us.php">İletisim</a></li>
+                        <li><a href="about.php">Hakkımızda</a></li>
+                        <li><a href="contact-us.php">İletişim</a></li>
                     </ul>
                 </nav>
                 <!-- Main Navigation / End -->
