@@ -4,5 +4,5 @@ $username = "root";
 $password = "";
 $dbname = "emlaksite";
 
-$url = "http://localhost:8080/EmlakSite/TIE-2-emlak-site-dev/";
+$url = "http://localhost:1011/TIE-2-emlak-site-dev/";
 ?>
